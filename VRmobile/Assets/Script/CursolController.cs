@@ -1,0 +1,32 @@
+using UnityEngine;
+using System.Collections;
+
+public class CursolController : MonoBehaviour
+{
+	public static bool trgFlg = false;
+
+
+    void Update()
+    {
+        //Vector3 player = GameObject.Find("VREye").transform.position;
+        
+
+        Ray ray = new Ray(Camera.main.transform.position,
+            Camera.main.transform.rotation * Vector3.forward);
+
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.transform.gameObject.name == "Floor")
+            {
+                transform.position = hit.point + new Vector3(0, 0.1f, 0);
+            }
+        }
+
+            if (Input.GetMouseButtonDown(0)|| VvrController.Trigger())
+        {
+        	Vector3 pos = transform.position;
+        	GameObject.Find("VREye").transform.position = new Vector3(pos.x,6,pos.z);
+        }
+    }
+}
