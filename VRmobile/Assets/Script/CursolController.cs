@@ -9,7 +9,7 @@ public class CursolController : MonoBehaviour
     void Update()
     {
         //Vector3 player = GameObject.Find("VREye").transform.position;
-        
+        VvrController.ConnectRequest();
 
         Ray ray = new Ray(Camera.main.transform.position,
             Camera.main.transform.rotation * Vector3.forward);
@@ -23,7 +23,7 @@ public class CursolController : MonoBehaviour
             }
         }
 
-            if (Input.GetMouseButtonDown(0)|| VvrController.Trigger())
+            if (Input.GetMouseButtonDown(0)|| VvrController.AppButton())
         {
         	Vector3 pos = transform.position;
         	GameObject.Find("VREye").transform.position = new Vector3(pos.x,6,pos.z);
