@@ -26,7 +26,16 @@ public class CursolController : MonoBehaviour
             if (Input.GetMouseButtonDown(0)|| VvrController.AppButton())
         {
         	Vector3 pos = transform.position;
-        	GameObject.Find("VREye").transform.position = new Vector3(pos.x,6,pos.z);
+
+            if(Player.syagami == true)
+            {
+                GameObject.Find("VREye").transform.position = new Vector3(pos.x, 1, pos.z);
+            }
+            else
+            {
+                GameObject.Find("VREye").transform.position = new Vector3(pos.x, 6, pos.z);
+            }
+        	
         }
     }
 }
