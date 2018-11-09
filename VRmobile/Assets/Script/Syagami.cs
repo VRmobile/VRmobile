@@ -5,6 +5,7 @@ using UnityEngine.VR;
 
 public class Syagami : MonoBehaviour
 {
+    /*
     //変数定義
     bool ONE;           //1回だけ処理のフラグ
     bool smokeFlg;    //煙範囲内にいるかどうか
@@ -61,5 +62,5 @@ public class Syagami : MonoBehaviour
 
       //  Debug.Log("startPos"+startPos);
       //  Debug.Log(pos);
-    }
+    }*/
 }

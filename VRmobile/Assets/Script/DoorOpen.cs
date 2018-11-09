@@ -15,7 +15,6 @@ public class DoorOpen : MonoBehaviour {
         Vector3 doorPos = door.transform.position;
         Vector3 playerPos = VREye.transform.position;
         float dis = Vector3.Distance(doorPos, playerPos);
-        Debug.Log(dis);
         if (dis <= 13 && VvrController.Trigger()|| dis <= 13 && Input.GetKey(KeyCode.Space))
         {
             transform.rotation = Quaternion.Euler(0, 90, 0);

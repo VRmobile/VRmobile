@@ -27,7 +27,7 @@ public class CursolController : MonoBehaviour
         {
         	Vector3 pos = transform.position;
 
-            if(Player.syagami == true)
+            if(Player.squatFlg == true)
             {
                 GameObject.Find("VREye").transform.position = new Vector3(pos.x, 1, pos.z);
             }
