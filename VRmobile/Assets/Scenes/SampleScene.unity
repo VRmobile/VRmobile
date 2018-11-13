@@ -400,7 +400,6 @@ GameObject:
   - component: {fileID: 247483292}
   - component: {fileID: 247483293}
   - component: {fileID: 247483294}
-  - component: {fileID: 247483295}
   - component: {fileID: 247483296}
   m_Layer: 0
   m_Name: VREye
@@ -447,17 +446,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &247483295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 247483291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bbfb24f758f98346b698460d6b584c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &247483296
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -752,25 +740,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   postprocessing: {fileID: 11400000, guid: 5a9285b5546cf984087fa2e528f0cf30, type: 2}
-  vig:
-    mode: 0
-    color:
-      r: 0
-      g: 0
-      b: 0
-      a: 0
-    center: {x: 0, y: 0}
-    intensity: 0
-    smoothness: 0
-    roundness: 0
-    mask: {fileID: 0}
-    opacity: 0
-    rounded: 0
   damageone: 0
   recovery: 0
   dead: 0
   deadTime: 0
-  trg: 0
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0
