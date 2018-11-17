@@ -5,6 +5,9 @@ using UnityEngine;
 public class DoorOpen : MonoBehaviour {
     public GameObject door;
     public GameObject VREye;
+
+    [SerializeField]
+    private bool backDraftTrg = false;
 	// Use this for initialization
 	void Start () {
 
@@ -17,7 +20,17 @@ public class DoorOpen : MonoBehaviour {
         float dis = Vector3.Distance(doorPos, playerPos);
         if (dis <= 13 && VvrController.Trigger()|| dis <= 13 && Input.GetKey(KeyCode.Space))
         {
-            transform.rotation = Quaternion.Euler(0, 90, 0);
+            if (backDraftTrg == false)
+            {
+                //バックドラフト無し
+                transform.rotation = Quaternion.Euler(0, 90, 0);
+            }
+            else
+            {
+                //バックドラフトあり
+                transform.rotation = Quaternion.Euler(0, 90, 0);
+                Debug.Log("ボン");
+            }
         }
     }
 }

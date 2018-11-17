@@ -26,6 +26,7 @@ public class Player : MonoBehaviour {
 
     }
 
+    
     void OnTriggerExit(Collider other)
     {
         if (other.tag == "smokeDamage")
@@ -34,6 +35,8 @@ public class Player : MonoBehaviour {
             // Debug.Log("煙");
         }
     }
+
+
 
     // Update is called once per frame
     void Update () {

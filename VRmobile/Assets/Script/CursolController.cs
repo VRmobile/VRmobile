@@ -23,11 +23,11 @@ public class CursolController : MonoBehaviour
             }
         }
 
-            if (Input.GetMouseButtonDown(0)|| VvrController.AppButton())
+        if (Input.GetMouseButtonDown(0) || VvrController.AppButton())
         {
-        	Vector3 pos = transform.position;
+            Vector3 pos = transform.position;
 
-            if(Player.squatFlg == true)
+            if (Player.squatFlg == true)
             {
                 GameObject.Find("VREye").transform.position = new Vector3(pos.x, 1, pos.z);
             }
@@ -35,7 +35,7 @@ public class CursolController : MonoBehaviour
             {
                 GameObject.Find("VREye").transform.position = new Vector3(pos.x, 6, pos.z);
             }
-        	
+
         }
     }
 }
