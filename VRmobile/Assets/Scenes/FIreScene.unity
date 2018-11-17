@@ -400,8 +400,8 @@ GameObject:
   - component: {fileID: 247483292}
   - component: {fileID: 247483293}
   - component: {fileID: 247483294}
-  - component: {fileID: 247483296}
   - component: {fileID: 247483295}
+  - component: {fileID: 247483296}
   m_Layer: 0
   m_Name: VREye
   m_TagString: Player
@@ -455,10 +455,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 247483291}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b5f110bfa5f305469ff67bd416a4cf5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bbfb24f758f98346b698460d6b584c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VReye: {fileID: 0}
 --- !u!54 &247483296
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -726,7 +725,6 @@ GameObject:
   - component: {fileID: 282840813}
   - component: {fileID: 282840811}
   - component: {fileID: 282840812}
-  - component: {fileID: 282840815}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -752,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 5a9285b5546cf984087fa2e528f0cf30, type: 2}
+  profile: {fileID: 0}
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0
@@ -802,22 +800,6 @@ Transform:
   m_Father: {fileID: 247483292}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &282840815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 282840810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd8223cbaf0196747ab54d5f5544a93b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  postprocessing: {fileID: 11400000, guid: 26c609e3f2e299a4d91b174a625097d4, type: 2}
-  damageone: 0
-  recovery: 0
-  dead: 0
-  deadTime: 0
 --- !u!1 &437360659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26374f42a3061aa4c81b62eaa2a774fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VReye: {fileID: 247483291}
 --- !u!114 &560481931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2457,7 +2438,7 @@ GameObject:
   - component: {fileID: 1825121793}
   m_Layer: 0
   m_Name: Smoke
-  m_TagString: fire
+  m_TagString: smokeDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2481,7 +2462,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1825121792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6, y: 4, z: 2.44}
+  m_LocalPosition: {x: 26.49, y: 15, z: 2.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
