@@ -6,23 +6,27 @@ public class Ded : MonoBehaviour
 {
     public static int Dedpoint = 0;
 
-    public GameObject VReye;
+    public GameObject panel;
+
+    FadeScript fede;
 
     void OnTriggerStay(Collider other)
     {
-
+        //スモーク
         if (other.tag == "smokeDamage")
         {
             Dedpoint = 1;
 
             Debug.Log(Dedpoint);
         }
+        //炎
         if (other.tag == "fire")
         {
             Dedpoint = 2;
             Debug.Log(Dedpoint);
 
         }
+        //バックドラフト
         if (other.tag == "BackDraft")
         {
             Dedpoint = 3;
@@ -35,6 +39,13 @@ public class Ded : MonoBehaviour
         return Dedpoint;
     }
 
+    void Start()
+    {
+
+        fede = panel.GetComponent<FadeScript>();
+    }
+
+
 
 
     // Update is called once per frame
@@ -42,13 +53,17 @@ public class Ded : MonoBehaviour
     {
         switch (Dedpoint)
         {
+            //煙
             case 1:
+                fede.Fead();
                 break;
+            //炎
             case 2:
-
+                fede.Fead();
                 break;
+            //バックドラフト
             case 3:
-
+                fede.Fead();
                 break;
 
 

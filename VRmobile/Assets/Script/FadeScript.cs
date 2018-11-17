@@ -15,7 +15,7 @@ public class FadeScript : MonoBehaviour
         blue = GetComponent<Image>().color.b;
     }
 
-    void Update()
+    public void Fead()
     {
         GetComponent<Image>().color = new Color(red, green, blue, alfa);
         alfa += speed;
