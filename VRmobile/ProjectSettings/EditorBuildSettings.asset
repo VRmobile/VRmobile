@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Vroom/Demo/Permissions/PermissionDemo.unity
     guid: c54de407f493f44b09480f90381206cb
+  - enabled: 1
+    path: Assets/Scenes/FIreScene.unity
+    guid: 256191c3ecc90d8428b6a0c5693dcad7
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: dc1767509b2237748bbb0691285ee04b
   m_configObjects: {}

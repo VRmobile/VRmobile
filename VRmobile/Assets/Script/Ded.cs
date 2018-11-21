@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ded : MonoBehaviour
 {
@@ -57,7 +58,6 @@ public class Ded : MonoBehaviour
             case 1:
                 fede.Fead();
                 break;
-            //炎
             case 2:
                 fede.Fead();
                 break;

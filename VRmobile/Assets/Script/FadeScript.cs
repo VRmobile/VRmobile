@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FadeScript : MonoBehaviour
 {
     float alfa;
-    float speed = 0.03f;
+    float speed = 0.01f;
     float red, green, blue;
 
     void Start()
@@ -17,7 +18,15 @@ public class FadeScript : MonoBehaviour
 
     public void Fead()
     {
-        GetComponent<Image>().color = new Color(red, green, blue, alfa);
-        alfa += speed;
+        if (alfa >=2.0f)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+        else
+        {
+            GetComponent<Image>().color = new Color(red, green, blue, alfa);
+            Debug.Log(alfa);
+            alfa += speed;
+        }
     }
 }
