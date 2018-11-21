@@ -1534,6 +1534,11 @@ Prefab:
       propertyPath: VREye
       value: 
       objectReference: {fileID: 247483291}
+    - target: {fileID: 114648871958634628, guid: 6ea7ed3483360a343b2ca967c6d4cb65,
+        type: 2}
+      propertyPath: backDraftTrg
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ea7ed3483360a343b2ca967c6d4cb65, type: 2}
   m_IsPrefabParent: 0
@@ -1754,6 +1759,7 @@ GameObject:
   - component: {fileID: 1186523759}
   - component: {fileID: 1186523758}
   - component: {fileID: 1186523757}
+  - component: {fileID: 1186523761}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1832,6 +1838,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1186523761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1186523756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ba4338dc9c94e40a57834fece587e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1190980836 stripped
 Transform:
   m_PrefabParentObject: {fileID: 498412, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}

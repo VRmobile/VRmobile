@@ -20,7 +20,7 @@ public class Player : MonoBehaviour {
         if (other.tag == "smokeDamage")
         {//otherには入ってきたオブジェクトが渡されているのでtagを比較しています。
             smokeFlg = true;
-            Debug.Log("煙範囲");
+            //Debug.Log("煙範囲");
         }
 
 
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour {
         }
         else
         {
-            Debug.Log("回避");
+            //Debug.Log("回避");
         }
 
 
