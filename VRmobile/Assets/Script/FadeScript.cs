@@ -25,7 +25,6 @@ public class FadeScript : MonoBehaviour
         else
         {
             GetComponent<Image>().color = new Color(red, green, blue, alfa);
-            Debug.Log(alfa);
             alfa += speed;
         }
     }

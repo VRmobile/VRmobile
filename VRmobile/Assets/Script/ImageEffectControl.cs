@@ -76,15 +76,10 @@ public class ImageEffectControl : MonoBehaviour
         {
             if (deadTime >= 100)
             {
-                if (trg == false)
-                {
 
                     fede.Fead();
-                    trg = true;
-                }
-                    
-               
-                
+                    Debug.Log(trg);
+        
             }
             else
             {

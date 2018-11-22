@@ -25,7 +25,7 @@ public class Ded : MonoBehaviour
         {
             Dedpoint = 1;
 
-            Debug.Log(Dedpoint);
+            //Debug.Log(Dedpoint);
         }
         //炎
         if (other.tag == "fire")
