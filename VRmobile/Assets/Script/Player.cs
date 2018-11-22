@@ -73,6 +73,8 @@ public class Player : MonoBehaviour {
         }
         else
         {
+            FindObjectOfType<ImageEffectControl>().damageone = false;
+            FindObjectOfType<ImageEffectControl>().recovery = true;
             //Debug.Log("回避");
         }
 

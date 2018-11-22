@@ -38,7 +38,7 @@ public class ControllerSample_SingleHand : MonoBehaviour
 	{
 		if (VvrController.Recentered() == true) {
 			target.localRotation = VvrController.Orientation (VvrController.RightHand);
-			//target.rotation = Quaternion.identity;
+			target.rotation = Quaternion.identity;
 		} else {
 			target.rotation = VvrController.Orientation (VvrController.RightHand);
 		}

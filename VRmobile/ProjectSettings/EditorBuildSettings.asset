@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
     path: Assets/Vroom/Demo/Permissions/PermissionDemo.unity
     guid: c54de407f493f44b09480f90381206cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Vroom/Demo/Controller/Scenes/ControllerDemo.unity
     guid: 1925b84ee59bb4b53adaefabdca2c6d4
   m_configObjects: {}
