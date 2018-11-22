@@ -75,7 +75,7 @@ public class Player : MonoBehaviour {
         {
             FindObjectOfType<ImageEffectControl>().damageone = false;
             FindObjectOfType<ImageEffectControl>().recovery = true;
-            Debug.Log("回避");
+            //Debug.Log("回避");
         }
 
 
