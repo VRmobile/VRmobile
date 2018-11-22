@@ -26,8 +26,9 @@ public class ImageEffectControl : MonoBehaviour
 
     private bool trg = false;
 
+    public GameObject panel;
 
-
+     FadeScript fede;
 
     // Use this for initialization
     void Start()
@@ -35,11 +36,12 @@ public class ImageEffectControl : MonoBehaviour
         vig = postprocessing.vignette.settings;
         vig.intensity = 0.0f;                    //vignetteの初期化
         postprocessing.vignette.settings = vig;  //vignetteへ初期化の値を反映
+        fede = panel.GetComponent<FadeScript>();
     }
 
 
     // Update is called once per frame
-    void Update()
+   public void Update()
     {
 
         //ダメージOne
@@ -75,8 +77,14 @@ public class ImageEffectControl : MonoBehaviour
             if (deadTime >= 100)
             {
                 if (trg == false)
-                    // decision.GetComponent<Decision>().SmokeDead();
+                {
+
+                    fede.Fead();
                     trg = true;
+                }
+                    
+               
+                
             }
             else
             {

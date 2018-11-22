@@ -459,6 +459,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 560481928}
+  fireDed: 0
+  smokeDed: 0
+  backDed: 0
 --- !u!54 &247483296
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -813,11 +816,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8223cbaf0196747ab54d5f5544a93b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  postprocessing: {fileID: 11400000, guid: 26c609e3f2e299a4d91b174a625097d4, type: 2}
+  postprocessing: {fileID: 11400000, guid: 5a9285b5546cf984087fa2e528f0cf30, type: 2}
   damageone: 0
   recovery: 0
   dead: 0
-  deadTime: 0
+  deadTime: 100
+  panel: {fileID: 560481928}
 --- !u!1 &437360659
 GameObject:
   m_ObjectHideFlags: 0

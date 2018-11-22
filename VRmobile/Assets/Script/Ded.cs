@@ -11,6 +11,13 @@ public class Ded : MonoBehaviour
 
     FadeScript fede;
 
+    //アンケート集計用
+    public int fireDed;
+
+    public int smokeDed;
+
+    public int backDed;
+    //アンケート集計用
     void OnTriggerStay(Collider other)
     {
         //スモーク
@@ -54,10 +61,6 @@ public class Ded : MonoBehaviour
     {
         switch (Dedpoint)
         {
-            //煙
-            case 1:
-                fede.Fead();
-                break;
             case 2:
                 fede.Fead();
                 break;
