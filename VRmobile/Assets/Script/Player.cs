@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     private Vector3 VREye;
-
+    public VRTeleporter teleporter;
     public static bool squatFlg;                      //しゃがんでいるかどうか
     bool smokeFlg;                                    //煙範囲内にいるかどうか
 
@@ -42,6 +42,17 @@ public class Player : MonoBehaviour {
     void Update () {
 
         VREye = this.transform.position;
+
+        //移動処理
+        if (Input.GetMouseButtonDown(0))
+        {
+            teleporter.ToggleDisplay(true);
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            teleporter.Teleport();
+            teleporter.ToggleDisplay(false);
+        }
 
         //しゃがむ処理部分
         if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false)

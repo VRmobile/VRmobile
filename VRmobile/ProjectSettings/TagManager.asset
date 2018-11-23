@@ -8,6 +8,8 @@ TagManager:
   - ExcludeTeleport
   - smokeDamage
   - fire
+  - FireExting
+  - ExtingFlame
   layers:
   - Default
   - TransparentFX
