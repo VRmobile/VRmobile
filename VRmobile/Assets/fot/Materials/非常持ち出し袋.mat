@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: "\u975E\u5E38\u6301\u3061\u51FA\u3057\u888B"
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 564783974ebaab746885fd04ef4cdc8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1473d723f61a6ae4f99e2c1fc2d4f343, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
