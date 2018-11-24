@@ -40,16 +40,14 @@ public class VRTeleporter : MonoBehaviour
     {
         if (groundDetected)
         {
-            bodyTransforn.position = groundPos + lastNormal * 5.0f;
-            /*
             if (Player.squatFlg == true)
             {
-                GameObject.Find("VREye").transform.position = new Vector3(groundPos.x, 1, groundPos.z);
+                bodyTransforn.position = groundPos + lastNormal * 2.0f;
             }
             else
             {
-                GameObject.Find("VREye").transform.position = new Vector3(groundPos.x, 6, groundPos.z);
-            }*/
+                bodyTransforn.position = groundPos + lastNormal * 5.0f;
+            }
         }
         else
         {
@@ -113,10 +111,15 @@ public class VRTeleporter : MonoBehaviour
             // linecast between last vertex and current vertex
             if (Physics.Linecast(pos, newPos, out hit, ~excludeLayers))
             {
-                groundDetected = true;
-                groundPos = hit.point;
-                lastNormal = hit.normal;
+                if (hit.transform.name == "teleport")
+                {
+                    groundDetected = true;
+                    groundPos = hit.point;
+                    lastNormal = hit.normal;
+                }
             }
+
+
             pos = newPos; // update current vertex as last vertex
         }
 

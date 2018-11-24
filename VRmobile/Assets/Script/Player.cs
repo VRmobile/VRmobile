@@ -71,7 +71,7 @@ public class Player : MonoBehaviour {
         //けむりに当たってからの処理
         if (smokeFlg == true)
         {
-            if (VREye.y >= 4)
+            if (squatFlg == false)
             {
                 FindObjectOfType<ImageEffectControl>().damageone = true;
                 FindObjectOfType<ImageEffectControl>().recovery = false;
