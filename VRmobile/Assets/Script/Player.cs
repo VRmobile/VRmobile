@@ -57,12 +57,12 @@ public class Player : MonoBehaviour {
         //しゃがむ処理部分
         if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false)
         {
-            this.transform.position = new Vector3(VREye.x, 1, VREye.z);
+            this.transform.position = new Vector3(VREye.x, VREye.y - 3.0f, VREye.z);
             squatFlg = true;
         }
         else if(Input.GetKeyDown(KeyCode.LeftArrow)&& squatFlg == true)
         {
-            this.transform.position = new Vector3(VREye.x, 6, VREye.z);
+            this.transform.position = new Vector3(VREye.x, VREye.y + 3.0f, VREye.z);
             squatFlg = false;
         }
 

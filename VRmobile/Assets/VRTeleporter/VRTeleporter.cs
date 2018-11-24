@@ -40,6 +40,8 @@ public class VRTeleporter : MonoBehaviour
     {
         if (groundDetected)
         {
+            bodyTransforn.position = groundPos + lastNormal * 5.0f;
+            /*
             if (Player.squatFlg == true)
             {
                 GameObject.Find("VREye").transform.position = new Vector3(groundPos.x, 1, groundPos.z);
@@ -47,7 +49,7 @@ public class VRTeleporter : MonoBehaviour
             else
             {
                 GameObject.Find("VREye").transform.position = new Vector3(groundPos.x, 6, groundPos.z);
-            }
+            }*/
         }
         else
         {
