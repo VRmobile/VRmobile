@@ -31,7 +31,7 @@ public class FireExtinguisher : MonoBehaviour
         float dis = Vector3.Distance(fireExtingPos, playerPos);
 
         //範囲内に入ったら置いてある消火器を見えなくして手元にホースが現れるようにする
-        if (dis <= 7)
+        if (dis <= 7 && fireExtingTrg == false)
         {
             fireExtingTrg = true;
             hose.SetActive(true);
@@ -46,6 +46,13 @@ public class FireExtinguisher : MonoBehaviour
         if (fireExtingTrg == true && VvrController.Trigger() || fireExtingTrg == true && Input.GetKey(KeyCode.RightArrow))
         {
             fireExtingParticle.Play();
+            Invoke("fireExtingStop", 3.5f);
         }
+    }
+
+    private void fireExtingStop()
+    {
+        fireExtingParticle.Stop();
+        hose.SetActive(false);
     }
 }
