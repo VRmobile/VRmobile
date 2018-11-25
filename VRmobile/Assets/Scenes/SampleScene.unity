@@ -1513,107 +1513,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Joystick:'
---- !u!1 &1186523756
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1186523760}
-  - component: {fileID: 1186523759}
-  - component: {fileID: 1186523758}
-  - component: {fileID: 1186523757}
-  - component: {fileID: 1186523761}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1186523757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1186523756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 491ca4740348a42da89343f7969969d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1420325260}
-  quatText: {fileID: 559210592}
-  joystickText: {fileID: 1180344872}
-  clickText: {fileID: 643838969}
-  padText: {fileID: 653067814}
-  appBtnText: {fileID: 573394997}
-  homeBtnText: {fileID: 887785407}
-  gyroText: {fileID: 247387679}
-  accelText: {fileID: 694598593}
-  triggerText: {fileID: 1621890088}
-  volumeText: {fileID: 1727813298}
-  deviceStatusText: {fileID: 540972436}
-  batteryLevelText: {fileID: 437360662}
-  deviceInformationText: {fileID: 1517608117}
-  connectBtn: {fileID: 271930393}
---- !u!114 &1186523758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1186523756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1186523759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1186523756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!4 &1186523760
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1186523756}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8000002, z: -20.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1186523761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1186523756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7ba4338dc9c94e40a57834fece587e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1285653737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,4 +2017,121 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
+  m_IsPrefabAsset: 0
+--- !u!1001 &2112583758
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4845743253282076, guid: fa27736b5b788ab4b8dff6457030bc59, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845743253282076, guid: fa27736b5b788ab4b8dff6457030bc59, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.8000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845743253282076, guid: fa27736b5b788ab4b8dff6457030bc59, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -20.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845743253282076, guid: fa27736b5b788ab4b8dff6457030bc59, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845743253282076, guid: fa27736b5b788ab4b8dff6457030bc59, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845743253282076, guid: fa27736b5b788ab4b8dff6457030bc59, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845743253282076, guid: fa27736b5b788ab4b8dff6457030bc59, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845743253282076, guid: fa27736b5b788ab4b8dff6457030bc59, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1420325260}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: quatText
+      value: 
+      objectReference: {fileID: 559210592}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: joystickText
+      value: 
+      objectReference: {fileID: 1180344872}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: clickText
+      value: 
+      objectReference: {fileID: 643838969}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: padText
+      value: 
+      objectReference: {fileID: 653067814}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: appBtnText
+      value: 
+      objectReference: {fileID: 573394997}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: homeBtnText
+      value: 
+      objectReference: {fileID: 887785407}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: gyroText
+      value: 
+      objectReference: {fileID: 247387679}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: accelText
+      value: 
+      objectReference: {fileID: 694598593}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: triggerText
+      value: 
+      objectReference: {fileID: 1621890088}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: volumeText
+      value: 
+      objectReference: {fileID: 1727813298}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: deviceStatusText
+      value: 
+      objectReference: {fileID: 540972436}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: batteryLevelText
+      value: 
+      objectReference: {fileID: 437360662}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: deviceInformationText
+      value: 
+      objectReference: {fileID: 1517608117}
+    - target: {fileID: 114581703820570292, guid: fa27736b5b788ab4b8dff6457030bc59,
+        type: 2}
+      propertyPath: connectBtn
+      value: 
+      objectReference: {fileID: 271930393}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa27736b5b788ab4b8dff6457030bc59, type: 2}
   m_IsPrefabAsset: 0

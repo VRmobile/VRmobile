@@ -42,7 +42,7 @@ public class VRTeleporter : MonoBehaviour
         {
             if (Player.squatFlg == true)
             {
-                bodyTransforn.position = groundPos + lastNormal * 2.0f;
+                bodyTransforn.position = groundPos + lastNormal * 3.2f;
             }
             else
             {

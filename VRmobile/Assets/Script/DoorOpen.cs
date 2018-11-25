@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorOpen : MonoBehaviour {
     public GameObject door;
@@ -9,8 +10,10 @@ public class DoorOpen : MonoBehaviour {
 
     [SerializeField]
     private bool backDraftTrg = false;
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private bool clearFlg = false;
+    // Use this for initialization
+    void Start () {
         draftParticle.Stop();
         //draftParticle = this.GetComponent<ParticleSystem>();
 
@@ -26,7 +29,12 @@ public class DoorOpen : MonoBehaviour {
 
         if (dis <= 13 && VvrController.Trigger()|| dis <= 13 && Input.GetKey(KeyCode.Space))
         {
-            if (backDraftTrg == false)
+            if(clearFlg == true)
+            {
+                SceneManager.LoadScene("Clear");
+                Debug.Log("clear");
+            }
+            else if (backDraftTrg == false)
             {
                 //バックドラフト無し
                 transform.rotation = Quaternion.Euler(0, this.transform.rotation.y +90, 0);

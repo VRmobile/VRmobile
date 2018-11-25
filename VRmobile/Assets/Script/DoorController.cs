@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class DoorController : MonoBehaviour
 {
     public GameObject door;
@@ -12,6 +12,8 @@ public class DoorController : MonoBehaviour
 
     [SerializeField]
     private bool backDraftTrg = false;
+    [SerializeField]
+    private bool clearFlg = false;
 
     void Start()
     {
@@ -32,7 +34,17 @@ public class DoorController : MonoBehaviour
 
         if (doorOpen)
         {
-            if (backDraftTrg == false)
+            if (clearFlg == true)
+            {
+                if (yDegree < 90.0F)
+                {
+                    yDegree += openSpeed * Time.deltaTime;
+                    door.transform.Rotate(0, openSpeed * Time.deltaTime, 0);
+                    Invoke("Clear", 2.0f);
+                }
+
+            }
+            else if (backDraftTrg == false)
             {
                 if (yDegree < 90.0F)
                 {
@@ -61,5 +73,11 @@ public class DoorController : MonoBehaviour
                 transform.Rotate(0, -openSpeed * Time.deltaTime, 0);
             }
         }
+    }
+
+    void Clear()
+    {
+        SceneManager.LoadScene("Clear");
+        Debug.Log("Clear");
     }
 }
