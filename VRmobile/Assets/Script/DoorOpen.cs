@@ -21,7 +21,7 @@ public class DoorOpen : MonoBehaviour {
         Vector3 doorPos = door.transform.position;
         Vector3 playerPos = VREye.transform.position;
         float dis = Vector3.Distance(doorPos, playerPos);
-
+        Debug.Log(this.transform.rotation.y);
        // draftParticle.Stop();
 
         if (dis <= 13 && VvrController.Trigger()|| dis <= 13 && Input.GetKey(KeyCode.Space))
@@ -29,7 +29,7 @@ public class DoorOpen : MonoBehaviour {
             if (backDraftTrg == false)
             {
                 //バックドラフト無し
-                transform.rotation = Quaternion.Euler(0, 90, 0);
+                transform.rotation = Quaternion.Euler(0, this.transform.rotation.y +90, 0);
             }
             else
             {

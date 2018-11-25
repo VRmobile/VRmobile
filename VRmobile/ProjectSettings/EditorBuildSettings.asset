@@ -14,13 +14,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FIreScene.unity
     guid: 256191c3ecc90d8428b6a0c5693dcad7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: dc1767509b2237748bbb0691285ee04b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TItle.unity
     guid: d5d57f392d7c0424f802760571922f4b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 0d793f151dae9fa4ca990ee5fdf4e3ed
   - enabled: 1
