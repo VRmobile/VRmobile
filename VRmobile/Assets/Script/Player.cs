@@ -44,23 +44,23 @@ public class Player : MonoBehaviour {
         VREye = this.transform.position;
 
         //移動処理
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)|| VvrController.AppButtonDown())
         {
             teleporter.ToggleDisplay(true);
         }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) || VvrController.AppButtonUp())
         {
             teleporter.Teleport();
             teleporter.ToggleDisplay(false);
         }
 
         //しゃがむ処理部分
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false|| VvrController.HomeButtonDown() && squatFlg == false)
         {
             this.transform.position = new Vector3(VREye.x, VREye.y - 2.0f, VREye.z);
             squatFlg = true;
         }
-        else if(Input.GetKeyDown(KeyCode.LeftArrow)&& squatFlg == true)
+        else if(Input.GetKeyDown(KeyCode.LeftArrow)&& squatFlg == true || VvrController.HomeButtonDown() && squatFlg == true)
         {
             this.transform.position = new Vector3(VREye.x, VREye.y + 2.0f, VREye.z);
             squatFlg = false;
