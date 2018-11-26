@@ -10,6 +10,7 @@ TagManager:
   - fire
   - FireExting
   - ExtingFlame
+  - floorSwitch
   layers:
   - Default
   - TransparentFX

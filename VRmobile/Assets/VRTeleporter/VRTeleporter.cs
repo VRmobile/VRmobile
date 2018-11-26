@@ -111,11 +111,23 @@ public class VRTeleporter : MonoBehaviour
             // linecast between last vertex and current vertex
             if (Physics.Linecast(pos, newPos, out hit, ~excludeLayers))
             {
-                if (hit.transform.name == "teleport")
+                if (Player.floorSwitchFlg == false)
                 {
-                    groundDetected = true;
-                    groundPos = hit.point;
-                    lastNormal = hit.normal;
+                    if (hit.transform.name == "teleport2")
+                    {
+                        groundDetected = true;
+                        groundPos = hit.point;
+                        lastNormal = hit.normal;
+                    }
+                }
+                else
+                {
+                    if (hit.transform.name == "teleport1")
+                    {
+                        groundDetected = true;
+                        groundPos = hit.point;
+                        lastNormal = hit.normal;
+                    }
                 }
             }
 

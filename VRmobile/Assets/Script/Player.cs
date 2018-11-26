@@ -7,12 +7,14 @@ public class Player : MonoBehaviour {
     public VRTeleporter teleporter;
     public static bool squatFlg;                      //しゃがんでいるかどうか
     bool smokeFlg;                                    //煙範囲内にいるかどうか
+    public static bool floorSwitchFlg;
 
     // Use this for initialization
     void Start () {
         //初期化処理
         squatFlg = false;
         smokeFlg = false;
+        floorSwitchFlg = false;
     }
 
     void OnTriggerStay(Collider other)
@@ -23,6 +25,10 @@ public class Player : MonoBehaviour {
             //Debug.Log("煙範囲");
         }
 
+        if(other.tag == "floorSwitch")
+        {
+            floorSwitchFlg = true;
+        }
 
     }
 
