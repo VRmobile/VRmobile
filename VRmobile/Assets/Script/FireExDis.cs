@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireExDis : MonoBehaviour {
-    public GameObject ExtingFlame;
+    //public GameObject ExtingFlame;
     private void OnParticleCollision(GameObject other)
     {
        /*
@@ -12,10 +12,10 @@ public class FireExDis : MonoBehaviour {
             Debug.Log("パーティクルです。" + other.gameObject.name + "とぶつかりました");
         }
         */
-        if (other.gameObject.tag == "ExtingFlame")
+        if (other.gameObject.tag == "FireExting")
         {
             Debug.Log("hei");
-            DestroyObject(ExtingFlame.gameObject);
+            DestroyObject(gameObject);
         }
     }
 }
