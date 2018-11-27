@@ -8,9 +8,9 @@ public class Tutorial : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //ヴルームコントローラのトリガーが引かれたら画面遷移
-        if (VvrController.Trigger() || Input.GetKeyDown(KeyCode.Space))
+        if (VvrController.Trigger() || Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("map1");
         }
 
     }

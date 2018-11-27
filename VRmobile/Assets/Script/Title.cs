@@ -9,7 +9,7 @@ public class Title : MonoBehaviour {
 	void Update () {
 
         //ヴルームコントローラのトリガーが引かれたら画面遷移
-        if (VvrController.Trigger()|| Input.GetKeyDown(KeyCode.Space))
+        if (VvrController.Trigger()|| Input.GetMouseButtonDown(0))
         {
             SceneManager.LoadScene("Tutorial");
         }
