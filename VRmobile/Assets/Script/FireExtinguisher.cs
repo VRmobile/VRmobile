@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class FireExtinguisher : MonoBehaviour
 {
-
-    public GameObject fireExting;
-    public GameObject VREye;
-    public GameObject hose;
-    public ParticleSystem fireExtingParticle;
+    [SerializeField]
+    private GameObject fireExting;
+    [SerializeField]
+    private GameObject VREye;
+    [SerializeField]
+    private GameObject hose;
+    [SerializeField]
+    private ParticleSystem fireExtingParticle;
     [SerializeField]
     private bool gameModeFireExting;
-    public static bool fireExtingTrg;
+
+    public static int fireCnt;               //火が消えたのをカウントする変数
+    public static bool fireExtingTrg;        //消火器から煙を噴出するかのトリガ
 
     private bool ONE; //一回処理のためのトリガー
 
@@ -73,14 +78,18 @@ public class FireExtinguisher : MonoBehaviour
             fireExtingParticle.Stop();
             ONE = false;
         }
-        if (fireExtingTrg == true && VvrController.TriggerDown() || fireExtingTrg == true && Input.GetKeyDown(KeyCode.RightArrow))
+        if (fireExtingTrg == true && VvrController.TriggerDown() || fireExtingTrg == true && Input.GetMouseButtonDown(0))
         {
             fireExtingParticle.Play();
             //Invoke("fireExtingStop", 3.5f);
         }
-        else if(fireExtingTrg == true && VvrController.TriggerUp() || fireExtingTrg == true && Input.GetKeyUp(KeyCode.RightArrow))
+        else if(fireExtingTrg == true && VvrController.TriggerUp() || fireExtingTrg == true && Input.GetMouseButtonUp(0))
         {
             fireExtingParticle.Stop();
+        }
+        if(fireCnt == 6)
+        {
+            SceneManager.LoadScene("Clear");
         }
     }
     private void fireExtingStop()

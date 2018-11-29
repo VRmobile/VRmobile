@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireExDis : MonoBehaviour {
-    //public GameObject ExtingFlame;
+    public GameObject ExtingSmoke;
+    Vector3 FireExting;
     private void OnParticleCollision(GameObject other)
     {
-       /*
+        FireExting = this.transform.position;
         if (other.gameObject.tag == "FireExting")
         {
-            Debug.Log("パーティクルです。" + other.gameObject.name + "とぶつかりました");
-        }
-        */
-        if (other.gameObject.tag == "FireExting")
-        {
-            Debug.Log("hei");
-            DestroyObject(gameObject);
+            this.gameObject.SetActive(false);
+            Instantiate(ExtingSmoke, new Vector3(FireExting.x, FireExting.y, FireExting.z), Quaternion.identity);
+            FireExtinguisher.fireCnt++;
         }
     }
 }
