@@ -49,7 +49,7 @@ public class Ded : MonoBehaviour
 
     void Start()
     {
-
+        Dedpoint = 0;
         fede = panel.GetComponent<FadeScript>();
     }
 

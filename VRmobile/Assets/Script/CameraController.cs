@@ -1,20 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//OnGUIの部分は今回は削除
 public class CameraController : MonoBehaviour
 {
+    private GUIStyle labelStyle;
     Quaternion start_gyro;
+    Quaternion gyro;
+
     void Start()
     {
-        Input.gyro.enabled = true;
-        start_gyro = StartCameraController.ini_gyro;
+
     }
+
     void Update()
     {
+        Input.gyro.enabled = true;
         if (Input.gyro.enabled)
         {
-            Quaternion gyro = Input.gyro.attitude;
-            this.transform.localRotation = Quaternion.Euler(0, -start_gyro.y, 0) * (new Quaternion(-gyro.x, -gyro.y, gyro.z, gyro.w));
+            gyro = Input.gyro.attitude;
+            gyro = Quaternion.Euler(-180, 0, 0) * (new Quaternion(-gyro.x, -gyro.y, gyro.z, gyro.w));
+            this.transform.localRotation = Quaternion.Inverse(StartCameraController.ini_gyro) * gyro;
         }
     }
 }

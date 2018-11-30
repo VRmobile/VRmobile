@@ -14,6 +14,8 @@ public class DoorController : MonoBehaviour
     private bool backDraftTrg = false;
     [SerializeField]
     private bool clearFlg = false;
+    [SerializeField]
+    private bool doorOpenFlg = true;
 
     void Start()
     {
@@ -27,7 +29,7 @@ public class DoorController : MonoBehaviour
         Vector3 playerPos = VREye.transform.position;
         float dis = Vector3.Distance(doorPos, playerPos);
 
-        if (dis <= 13 && VvrController.Trigger() || dis <= 13 && Input.GetKey(KeyCode.Space))
+        if (dis <= 13 && VvrController.Trigger()&&doorOpenFlg == true || dis <= 13 && Input.GetKey(KeyCode.Space) && doorOpenFlg == true)
         {
             doorOpen = true;
         }

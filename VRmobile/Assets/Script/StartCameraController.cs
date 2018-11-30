@@ -28,7 +28,7 @@ public class StartCameraController : MonoBehaviour
     {
         if (Input.gyro.enabled)
         {
-            ini_gyro = Quaternion.Euler(90, 0, 0) * (new Quaternion(-ini_gyro.x, -ini_gyro.y, ini_gyro.z, ini_gyro.w));
+            ini_gyro = Quaternion.Euler(-180, 0, 0) * (new Quaternion(-ini_gyro.x, ini_gyro.y, ini_gyro.z, ini_gyro.w));
             float x = Screen.width / 10;
             float y = 0;
             float w = Screen.width * 8 / 10;

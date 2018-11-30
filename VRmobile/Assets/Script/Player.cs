@@ -86,13 +86,15 @@ public class Player : MonoBehaviour {
             {
                 FindObjectOfType<ImageEffectControl>().damageone = false;
                 FindObjectOfType<ImageEffectControl>().recovery = true;
+                FindObjectOfType<ImageEffectControl>().deadTime = 0;
             }
         }
         else
         {
             FindObjectOfType<ImageEffectControl>().damageone = false;
             FindObjectOfType<ImageEffectControl>().recovery = true;
-            //Debug.Log("回避");
+            FindObjectOfType<ImageEffectControl>().deadTime = 0;
+            
         }
 
 
