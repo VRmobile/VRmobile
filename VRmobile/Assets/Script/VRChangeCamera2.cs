@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VR;
-public class VRChangeCamera : MonoBehaviour
+public class VRChangeCamera2 : MonoBehaviour
 {
     void Start()
     {
@@ -13,7 +13,7 @@ public class VRChangeCamera : MonoBehaviour
     {
         UnityEngine.XR.XRSettings.LoadDeviceByName("Cardboard");
         yield return null;
-        UnityEngine.XR.XRSettings.enabled = false;
+        UnityEngine.XR.XRSettings.enabled = true;
 
     }
 }
