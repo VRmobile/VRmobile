@@ -15,7 +15,6 @@ public class GameOverManeger : MonoBehaviour
         fire.SetActive(false);
         kemuri.SetActive(false);
         bakcdorahuto.SetActive(false);
-
     }
 	
 	// Update is called once per frame
@@ -27,13 +26,14 @@ public class GameOverManeger : MonoBehaviour
         {
             case 1:
                 {
-                    fire.SetActive(true);
+                    kemuri.SetActive(true);
                     Invoke("MainLoad", 1.5f);
                     break;
                 }
             case 2:
                 {
-                    kemuri.SetActive(true);
+                    
+                    fire.SetActive(true);
                     Invoke("MainLoad", 1.5f);
                     break;
                 }
@@ -50,4 +50,5 @@ public class GameOverManeger : MonoBehaviour
     {
         SceneManager.LoadScene("map1");
     }
+
 }

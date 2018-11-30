@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/fireExting.unity
     guid: 093279dc08f5faa4ba5b74ac9b2a5a45
+  - enabled: 1
+    path: Assets/NCMB/Scenes/3/NCMB.unity
+    guid: d38844f76e4a32a49a2aa08ebccc4ced
   m_configObjects: {}

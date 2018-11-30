@@ -111,6 +111,7 @@ public class VRTeleporter : MonoBehaviour
             // linecast between last vertex and current vertex
             if (Physics.Linecast(pos, newPos, out hit, ~excludeLayers))
             {
+                
                 if (Player.floorSwitchFlg == false)
                 {
                     if (hit.transform.name == "teleport2")

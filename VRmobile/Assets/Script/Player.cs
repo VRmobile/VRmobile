@@ -96,9 +96,11 @@ public class Player : MonoBehaviour {
             FindObjectOfType<ImageEffectControl>().deadTime = 0;
             
         }
+    }
 
-
-
+    public static bool getFloorSwitch()
+    {
+        return floorSwitchFlg;
     }
 
 }
