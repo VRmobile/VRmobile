@@ -573,7 +573,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4590787563678526, guid: 420261feb025bf84081d193f907275ac, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.89
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4590787563678526, guid: 420261feb025bf84081d193f907275ac, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2016,9 +2016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 937898676}
-  fireDed: 0
-  smokeDed: 0
-  backDed: 0
 --- !u!1 &1117434950
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,7 +2303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ba4338dc9c94e40a57834fece587e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraFlg: 0
 --- !u!1 &1202667528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,7 +3691,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1005038236900014, guid: f9f37def7bb321a44b12274fc0c422ef, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1854521846085594, guid: f9f37def7bb321a44b12274fc0c422ef, type: 2}
       propertyPath: m_IsActive

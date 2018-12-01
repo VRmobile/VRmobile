@@ -87,9 +87,9 @@ public class FireExtinguisher : MonoBehaviour
         {
             fireExtingParticle.Stop();
         }
-        if(fireCnt == 6)
+        if(fireCnt == 7)
         {
-            SceneManager.LoadScene("Clear");
+            SceneManager.LoadScene("FireExtingClear");
         }
     }
     private void fireExtingStop()

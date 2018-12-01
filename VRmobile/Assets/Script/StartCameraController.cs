@@ -57,7 +57,7 @@ public class StartCameraController : MonoBehaviour
 
         }
         //ヴルームコントローラのトリガーが引かれたら画面遷移
-        if (VvrController.Trigger() || Input.GetMouseButtonDown(0))
+        if (VvrController.AppButtonDown() || Input.GetMouseButtonDown(0))
         {
             Debug.Log(gameMode);
             if (gameMode==true)

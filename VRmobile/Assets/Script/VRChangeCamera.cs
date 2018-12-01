@@ -12,8 +12,8 @@ public class VRChangeCamera : MonoBehaviour
 
     IEnumerator LoadCardBoard()
     {
-        UnityEngine.XR.XRSettings.LoadDeviceByName("cardboard");
+        XRSettings.LoadDeviceByName("Cardboard");
         yield return null;
-        UnityEngine.XR.XRSettings.enabled = false;
+        XRSettings.enabled = false;
     }
 }
