@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MyButton : MonoBehaviour {
 
@@ -39,6 +40,13 @@ public class MyButton : MonoBehaviour {
     }
 
     public void OnSave() {
-        FindObjectOfType<VariableSave>().Save(); ;
+        FindObjectOfType<VariableSave>().Save();
+        Invoke("TitleLoad", 1.5f);
+    }
+
+
+    void TitleLoad()
+    {
+        SceneManager.LoadScene("Title");
     }
 }

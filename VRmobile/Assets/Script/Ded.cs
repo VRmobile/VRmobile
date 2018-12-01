@@ -21,6 +21,8 @@ public class Ded : MonoBehaviour
     public static int deadFloor;
 
     private bool switchFloorFlg;
+
+    private bool ONE;
     //アンケート集計用
     void OnTriggerStay(Collider other)
     {
@@ -45,7 +47,6 @@ public class Ded : MonoBehaviour
         if (other.tag == "BackDraft")
         {
             Dedpoint = 3;
-            backDed++;
             Debug.Log(Dedpoint);
 
         }
@@ -57,9 +58,10 @@ public class Ded : MonoBehaviour
 
     void Start()
     {
-        fireDed = 0;
-        smokeDed = 0;
-        backDed = 0;
+        ONE = true;
+        fireDed = DBGameOver.GetFire();
+        smokeDed = DBGameOver.GetSmoke();
+        backDed = DBGameOver.GetDraft();
         Dedpoint = 0;
         fede = panel.GetComponent<FadeScript>();
     }
@@ -75,20 +77,35 @@ public class Ded : MonoBehaviour
         switch (Dedpoint)
         {
             case 1:
-                smokeDed++;
                 fede.Fead();
                 DBFloorSwitch();
+                if (ONE)
+                {
+                    smokeDed++;
+                    ONE = false;
+                }
+                
                 break;
             case 2:
-                fireDed++;
                 fede.Fead();
                 DBFloorSwitch();
+                if (ONE)
+                {
+                    fireDed++;
+                    ONE = false;
+                }
+                
                 break;
             //バックドラフト
             case 3:
-                backDed++;
                 fede.Fead();
                 DBFloorSwitch();
+                if (ONE)
+                {
+                    backDed++;
+                    ONE = false;
+                }     
+                
                 break;
         };
     }

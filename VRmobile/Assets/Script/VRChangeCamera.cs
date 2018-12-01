@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VR;
+using UnityEngine.XR;
 public class VRChangeCamera : MonoBehaviour
 {
-    [SerializeField]
-    private bool cameraFlg = true;           //trueなら複眼表示、falseなら単眼表示
 
     void Start()
     {
@@ -14,15 +12,8 @@ public class VRChangeCamera : MonoBehaviour
 
     IEnumerator LoadCardBoard()
     {
-        UnityEngine.XR.XRSettings.LoadDeviceByName("Cardboard");
+        UnityEngine.XR.XRSettings.LoadDeviceByName("cardboard");
         yield return null;
-        if (cameraFlg)
-        {
-            UnityEngine.XR.XRSettings.enabled = true;
-        }
-        else
-        {
-            UnityEngine.XR.XRSettings.enabled = false;
-        }
+        UnityEngine.XR.XRSettings.enabled = false;
     }
 }

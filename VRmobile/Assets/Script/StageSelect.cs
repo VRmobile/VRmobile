@@ -30,6 +30,17 @@ public class StageSelect : MonoBehaviour {
             miniGame.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
             if (VvrController.AppButtonDown() || Input.GetKeyDown(KeyCode.Space))
             {
+
+                DBGameOver.floor = 0;
+                DBGameOver.fire = 0;
+                DBGameOver.smoke = 0;
+                DBGameOver.draft = 0;
+                Clear.clearFlg = false;
+
+                Ded.deadFloor = 0;
+                Ded.fireDed = 0;
+                Ded.smokeDed = 0;
+                Ded.backDed = 0;
                 SceneManager.LoadScene("Tutorial");
             }
         }
