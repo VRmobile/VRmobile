@@ -7,7 +7,7 @@ public class Player : MonoBehaviour {
     public VRTeleporter teleporter;
     public static bool squatFlg;                      //しゃがんでいるかどうか
     bool smokeFlg;                                    //煙範囲内にいるかどうか
-    public static bool floorSwitchFlg;
+    public bool floorSwitchFlg;
 
     // Use this for initialization
     void Start () {
@@ -28,6 +28,7 @@ public class Player : MonoBehaviour {
         if(other.tag == "floorSwitch")
         {
             floorSwitchFlg = true;
+            MainDataManager.floor = 2;
         }
 
     }
@@ -97,10 +98,4 @@ public class Player : MonoBehaviour {
             
         }
     }
-
-    public static bool getFloorSwitch()
-    {
-        return floorSwitchFlg;
-    }
-
 }

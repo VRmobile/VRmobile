@@ -35,12 +35,6 @@ public class StageSelect : MonoBehaviour {
                 DBGameOver.fire = 0;
                 DBGameOver.smoke = 0;
                 DBGameOver.draft = 0;
-                Clear.clearFlg = false;
-
-                Ded.deadFloor = 0;
-                Ded.fireDed = 0;
-                Ded.smokeDed = 0;
-                Ded.backDed = 0;
                 SceneManager.LoadScene("Tutorial");
             }
         }

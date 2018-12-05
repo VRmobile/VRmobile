@@ -63,7 +63,6 @@ public class VariableSave : MonoBehaviour {
         deadFire = DBGameOver.GetFire();
         deadSmoke = DBGameOver.GetSmoke();
         deadDraft = DBGameOver.GetDraft();
-        clear = Clear.GetClear();
 	}
 
 

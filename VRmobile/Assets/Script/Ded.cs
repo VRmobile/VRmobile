@@ -11,17 +11,6 @@ public class Ded : MonoBehaviour
 
     FadeScript fede;
 
-    //アンケート集計用
-    public static int fireDed;
-
-    public static int smokeDed;
-
-    public static int backDed;
-
-    public static int deadFloor;
-
-    private bool switchFloorFlg;
-
     private bool ONE;
     //アンケート集計用
     void OnTriggerStay(Collider other)
@@ -38,7 +27,6 @@ public class Ded : MonoBehaviour
         //炎
         if (other.tag == "fire")
         {
-            Debug.Log("hei" + fireDed);
             Dedpoint = 2;
             Debug.Log(Dedpoint);
 
@@ -57,11 +45,8 @@ public class Ded : MonoBehaviour
     }
 
     void Start()
-    {
+    { 
         ONE = true;
-        fireDed = DBGameOver.GetFire();
-        smokeDed = DBGameOver.GetSmoke();
-        backDed = DBGameOver.GetDraft();
         Dedpoint = 0;
         fede = panel.GetComponent<FadeScript>();
     }
@@ -72,26 +57,22 @@ public class Ded : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switchFloorFlg = Player.getFloorSwitch();
-        Debug.Log(switchFloorFlg);
         switch (Dedpoint)
         {
             case 1:
                 fede.Fead();
-                DBFloorSwitch();
                 if (ONE)
                 {
-                    smokeDed++;
+                    MainDataManager.smokeDead++;
                     ONE = false;
                 }
                 
                 break;
             case 2:
                 fede.Fead();
-                DBFloorSwitch();
                 if (ONE)
                 {
-                    fireDed++;
+                    MainDataManager.fireDead++;
                     ONE = false;
                 }
                 
@@ -99,49 +80,14 @@ public class Ded : MonoBehaviour
             //バックドラフト
             case 3:
                 fede.Fead();
-                DBFloorSwitch();
                 if (ONE)
                 {
-                    backDed++;
+                    MainDataManager.draftDead++;
                     ONE = false;
                 }     
                 
                 break;
         };
-    }
-
-    void DBFloorSwitch()
-    {
-        //FindObjectOfType<VariableSave>().clear = false;
-        Debug.Log("sd" + switchFloorFlg);
-        if (switchFloorFlg)
-        {
-            deadFloor = 1;
-        }
-        else
-        {
-            deadFloor = 2;
-        }
-    }
-
-    public static int GetDeadFloor()
-    {
-        return deadFloor;
-    }
-
-    public static int GetFireDed()
-    {
-        return fireDed;
-    }
-
-    public static int GetSmokeDed()
-    {
-        return smokeDed;
-    }
-
-    public static int GetDraftDed()
-    {
-        return backDed;
     }
 }
        

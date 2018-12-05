@@ -9,10 +9,6 @@ public class DBGameOver : MonoBehaviour {
     public static int draft;
     // Use this for initialization
     void Start () {
-        floor = Ded.GetDeadFloor();
-        fire = Ded.GetFireDed();
-        smoke = Ded.GetSmokeDed();
-        draft = Ded.GetDraftDed();
 	}
 	
     public static int getFloor()

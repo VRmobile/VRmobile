@@ -112,7 +112,7 @@ public class VRTeleporter : MonoBehaviour
             if (Physics.Linecast(pos, newPos, out hit, ~excludeLayers))
             {
                 
-                if (Player.floorSwitchFlg == false)
+                if (MainDataManager.floor == 2)
                 {
                     if (hit.transform.name == "teleport2")
                     {

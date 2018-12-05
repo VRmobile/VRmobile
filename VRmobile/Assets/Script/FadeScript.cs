@@ -20,7 +20,7 @@ public class FadeScript : MonoBehaviour
     {
         if (alfa >=2.0f)
         {
-            SceneManager.LoadScene("GameOver");
+            //SceneManager.LoadScene("GameOver");
         }
         else
         {
