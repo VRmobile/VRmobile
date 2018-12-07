@@ -31,10 +31,10 @@ public class StageSelect : MonoBehaviour {
             if (VvrController.AppButtonDown() || Input.GetKeyDown(KeyCode.Space))
             {
 
-                DBGameOver.floor = 0;
-                DBGameOver.fire = 0;
-                DBGameOver.smoke = 0;
-                DBGameOver.draft = 0;
+                MainDataManager.floor = 2;
+                MainDataManager.fireDead = 0;
+                MainDataManager.smokeDead = 0;
+                MainDataManager.draftDead = 0;
                 SceneManager.LoadScene("Tutorial");
             }
         }

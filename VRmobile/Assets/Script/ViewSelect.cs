@@ -16,6 +16,7 @@ public class ViewSelect : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        MainView.SetActive(true);
         DeadFireView.SetActive(false);
         DeadSmokeView.SetActive(false);
         DeadDraftView.SetActive(false);
@@ -28,11 +29,11 @@ public class ViewSelect : MonoBehaviour {
         {
             Invoke("View", 2.0f);
         }
-		
-	}
+    }
 
     void View()
     {
+        
         switch(Ded.Dedpoint)
         {
             case 1:
@@ -45,5 +46,6 @@ public class ViewSelect : MonoBehaviour {
                 DeadDraftView.SetActive(true);
                 break;
         }
+
     }
 }

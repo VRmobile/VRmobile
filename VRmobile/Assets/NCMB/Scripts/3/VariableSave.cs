@@ -31,15 +31,18 @@ public class VariableSave : MonoBehaviour {
     /// <summary>
     /// 火の死亡回数
     /// </summary>
-    public int deadFire = 0;
+    [SerializeField]
+    public  static int deadFire = 0;
     /// <summary>
     /// 煙の死亡回数
     /// </summary>
-    public int deadSmoke = 0;
+    [SerializeField]
+    public static int deadSmoke = 0;
     /// <summary>
     /// ドラフトの死亡回数
     /// </summary>
-    public int deadDraft = 0;
+    [SerializeField]
+    public static int deadDraft = 0;
     /// <summary>
     /// クリアしたか
     /// </summary>
@@ -59,10 +62,11 @@ public class VariableSave : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        floor = DBGameOver.getFloor();
-        deadFire = DBGameOver.GetFire();
-        deadSmoke = DBGameOver.GetSmoke();
-        deadDraft = DBGameOver.GetDraft();
+        floor = MainDataManager.getFloor();
+        deadFire = MainDataManager.getFireDead();
+        deadSmoke = MainDataManager.getSmokeDead();
+        deadDraft = MainDataManager.getDraftDead();
+        Debug.Log(deadFire);
 	}
 
 
@@ -100,5 +104,20 @@ public class VariableSave : MonoBehaviour {
     public void Save() {
         SaveVariableData(sex , age , time , floor , deadPointX , deadPointZ , deadFire , deadSmoke , deadDraft , clear, quesVR, quesMove, quesDrunk);
         Debug.Log("セーブしたよ");
+    }
+
+    public static int getFireDead()
+    {
+        return deadFire;
+    }
+
+    public static int getSmokeDead()
+    {
+        return deadSmoke;
+    }
+
+    public static int getDraftDead()
+    {
+        return deadDraft;
     }
 }

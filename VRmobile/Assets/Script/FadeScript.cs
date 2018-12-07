@@ -20,7 +20,17 @@ public class FadeScript : MonoBehaviour
     {
         if (alfa >=2.0f)
         {
-            //SceneManager.LoadScene("GameOver");
+           // FindObjectOfType<ViewSelect>().MainView.SetActive(false);
+
+            if(Ded.Dedpoint!= 0)
+            {
+               // SceneManager.LoadScene("map1");
+            }
+            else
+            {
+                SceneManager.LoadScene("NCMB");
+            }
+            
         }
         else
         {

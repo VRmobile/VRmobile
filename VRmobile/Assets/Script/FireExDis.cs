@@ -12,6 +12,7 @@ public class FireExDis : MonoBehaviour {
         {
             this.gameObject.SetActive(false);
             Instantiate(ExtingSmoke, new Vector3(FireExting.x, FireExting.y, FireExting.z), Quaternion.identity);
+            FindObjectOfType<FireExtinguisher>().hose.SetActive(false);
             FireExtinguisher.fireCnt++;
         }
     }

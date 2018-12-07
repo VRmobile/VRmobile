@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
         if(other.tag == "floorSwitch")
         {
             floorSwitchFlg = true;
-            MainDataManager.floor = 2;
+            MainDataManager.floor = 1;
         }
 
     }

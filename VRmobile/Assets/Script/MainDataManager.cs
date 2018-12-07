@@ -9,11 +9,21 @@ public class MainDataManager : MonoBehaviour {
     public static int smokeDead;
     public static int draftDead;
     public static int floor=2;
-    public static int clear;
+    public static bool clear;
     public static float time;
 
+
+    void Start()
+    {
+        floor = 2;
+        fireDead = VariableSave.getFireDead();
+        smokeDead = VariableSave.getSmokeDead();
+        draftDead = VariableSave.getDraftDead();
+        clear = false;
+    }
     // Update is called once per frame
     void Update () {
+        
 
 	}
 
@@ -39,7 +49,7 @@ public class MainDataManager : MonoBehaviour {
         return floor;
     }
 
-    public static int getClear()
+    public static bool getClear()
     {
         return clear;
     }

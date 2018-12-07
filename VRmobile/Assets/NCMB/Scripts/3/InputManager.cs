@@ -83,8 +83,8 @@ public class InputManager : MonoBehaviour {
             string inputValue = inputField.text;
 
             //string型をint型に変換してる
-            FindObjectOfType<VariableSave>().deadFire = int.Parse(inputValue);
-            Debug.Log(FindObjectOfType<VariableSave>().deadFire);
+            //FindObjectOfType<VariableSave>().deadFire = int.Parse(inputValue);
+           // Debug.Log(FindObjectOfType<VariableSave>().deadFire);
 
             InitInputField();
         }
@@ -98,8 +98,8 @@ public class InputManager : MonoBehaviour {
             string inputValue = inputField.text;
 
             //string型をint型に変換してる
-            FindObjectOfType<VariableSave>().deadSmoke = int.Parse(inputValue);
-            Debug.Log(FindObjectOfType<VariableSave>().deadSmoke);
+           // FindObjectOfType<VariableSave>().deadSmoke = int.Parse(inputValue);
+           // Debug.Log(FindObjectOfType<VariableSave>().deadSmoke);
 
             InitInputField();
         }
@@ -113,8 +113,8 @@ public class InputManager : MonoBehaviour {
             string inputValue = inputField.text;
 
             //string型をint型に変換してる
-            FindObjectOfType<VariableSave>().deadDraft = int.Parse(inputValue);
-            Debug.Log(FindObjectOfType<VariableSave>().deadDraft);
+           // FindObjectOfType<VariableSave>().deadDraft = int.Parse(inputValue);
+           // Debug.Log(FindObjectOfType<VariableSave>().deadDraft);
 
             InitInputField();
         }

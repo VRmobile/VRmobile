@@ -7,13 +7,12 @@ public class DoorController : MonoBehaviour
     public GameObject VREye;
     public ParticleSystem draftParticle;
     public float openSpeed; //ドアオープンスピード
-    private bool doorOpen; //ドアチェック
+    public bool doorOpen; //ドアチェック
     private float yDegree; //ドア回転角
-
     [SerializeField]
     private bool backDraftTrg = false;
     [SerializeField]
-    private bool clearFlg = false;
+    public bool clearFlg = false;
     [SerializeField]
     private bool doorOpenFlg = true;
 
@@ -38,11 +37,18 @@ public class DoorController : MonoBehaviour
         {
             if (clearFlg == true)
             {
+               
+                Invoke("Clear", 5.0f);
                 if (yDegree < 90.0F)
                 {
                     yDegree += openSpeed * Time.deltaTime;
                     door.transform.Rotate(0, openSpeed * Time.deltaTime, 0);
-                    Invoke("Clear", 2.0f);
+                    Debug.Log(yDegree);
+                    
+                }
+                if(yDegree > 90.0F)
+                {
+                    FindObjectOfType<ViewSelect>().ClearView.SetActive(true);
                 }
 
             }
@@ -79,7 +85,7 @@ public class DoorController : MonoBehaviour
 
     void Clear()
     {
-        SceneManager.LoadScene("Clear");
+        //SceneManager.LoadScene("NCMB");
         Debug.Log("Clear");
     }
 }

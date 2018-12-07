@@ -9,7 +9,7 @@ public class FireExtinguisher : MonoBehaviour
     [SerializeField]
     private GameObject VREye;
     [SerializeField]
-    private GameObject hose;
+    public GameObject hose;
     [SerializeField]
     private ParticleSystem fireExtingParticle;
     [SerializeField]
@@ -23,7 +23,9 @@ public class FireExtinguisher : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        fireCnt = 0;
         fireExtingTrg = false;
+        fireExting.SetActive(true);
         hose.SetActive(false);
         ONE = true;
         
@@ -62,10 +64,14 @@ public class FireExtinguisher : MonoBehaviour
             }
             
         }
-        if (fireExtingTrg == true && VvrController.Trigger() || fireExtingTrg == true && Input.GetKey(KeyCode.RightArrow))
+        if (fireExtingTrg == true && VvrController.TriggerDown() || fireExtingTrg == true && Input.GetMouseButtonDown(1))
         {
             fireExtingParticle.Play();
-            Invoke("fireExtingStop", 3.5f);
+            //Invoke("fireExtingStop", 3.5f);
+        }
+        else if (fireExtingTrg == true && VvrController.TriggerUp() || fireExtingTrg == true && Input.GetMouseButtonUp(1))
+        {
+            fireExtingParticle.Stop();
         }
     }
     
@@ -91,10 +97,5 @@ public class FireExtinguisher : MonoBehaviour
         {
             SceneManager.LoadScene("FireExtingClear");
         }
-    }
-    private void fireExtingStop()
-    {
-        fireExtingParticle.Stop();
-        hose.SetActive(false);
     }
 }
