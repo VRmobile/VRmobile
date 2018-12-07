@@ -15,7 +15,6 @@ public class VRTeleporter : MonoBehaviour
 
     public float strength = 10f; // Increasing this value will increase overall arc length
 
-
     int maxVertexcount = 100; // limitation of vertices for performance. 
 
     private float vertexDelta = 0.08f; // Delta between each Vertex on arc. Decresing this value may cause performance problem.
@@ -107,12 +106,21 @@ public class VRTeleporter : MonoBehaviour
             velocity += Physics.gravity * vertexDelta;
 
             vertexList.Add(newPos); // add new calculated vertex
-
+            
             // linecast between last vertex and current vertex
             if (Physics.Linecast(pos, newPos, out hit, ~excludeLayers))
             {
-                
-                if (MainDataManager.floor == 2)
+                Debug.Log(FindObjectOfType<Player>().smokeTeleportFlg);
+                if (MainDataManager.floor == 2 && FindObjectOfType<Player>().smokeTeleportFlg == true)
+                {
+                    if (hit.transform.name == "SmokeTeleport")
+                    {
+                        groundDetected = true;
+                        groundPos = hit.point;
+                        lastNormal = hit.normal;
+                    }
+                }
+                else if (MainDataManager.floor == 2 && FindObjectOfType<Player>().smokeTeleportFlg == false)
                 {
                     if (hit.transform.name == "teleport2")
                     {
@@ -121,7 +129,8 @@ public class VRTeleporter : MonoBehaviour
                         lastNormal = hit.normal;
                     }
                 }
-                else
+                
+                else if(MainDataManager.floor ==1 && FindObjectOfType<Player>().smokeTeleportFlg == false)
                 {
                     if (hit.transform.name == "teleport1")
                     {
@@ -130,9 +139,8 @@ public class VRTeleporter : MonoBehaviour
                         lastNormal = hit.normal;
                     }
                 }
+                
             }
-
-
             pos = newPos; // update current vertex as last vertex
         }
 
@@ -146,7 +154,6 @@ public class VRTeleporter : MonoBehaviour
         }
 
         // Update Line Renderer
-
         arcRenderer.positionCount = vertexList.Count;
         arcRenderer.SetPositions(vertexList.ToArray());
     }

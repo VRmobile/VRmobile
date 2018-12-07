@@ -20,7 +20,7 @@ public class FadeScript : MonoBehaviour
     {
         if (alfa >=2.0f)
         {
-           // FindObjectOfType<ViewSelect>().MainView.SetActive(false);
+            FindObjectOfType<ViewSelect>().MainView.SetActive(false);
 
             if(Ded.Dedpoint!= 0)
             {

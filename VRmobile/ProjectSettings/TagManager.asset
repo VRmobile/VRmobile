@@ -11,6 +11,8 @@ TagManager:
   - FireExting
   - ExtingFlame
   - floorSwitch
+  - smokeTrue
+  - smokeFalse
   layers:
   - Default
   - TransparentFX
