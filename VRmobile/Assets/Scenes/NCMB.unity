@@ -1689,9 +1689,11 @@ MonoBehaviour:
     m_Options:
     - m_Text: "\u672A\u5165\u529B"
       m_Image: {fileID: 0}
-    - m_Text: "10\u4EE3\u672A\u6E80"
+    - m_Text: "7\uFF5E9\u624D"
       m_Image: {fileID: 0}
-    - m_Text: "10\u4EE3"
+    - m_Text: "10\uFF5E12\u624D"
+      m_Image: {fileID: 0}
+    - m_Text: "13\uFF5E19\u624D"
       m_Image: {fileID: 0}
     - m_Text: "20\u4EE3"
       m_Image: {fileID: 0}
@@ -1699,7 +1701,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: "40\u4EE3"
       m_Image: {fileID: 0}
-    - m_Text: "50\u4EE3\u4EE5\u4E0A"
+    - m_Text: "50\u4EE3"
+      m_Image: {fileID: 0}
+    - m_Text: "60\u4EE3\u4EE5\u4E0A"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

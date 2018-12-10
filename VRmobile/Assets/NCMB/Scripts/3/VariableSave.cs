@@ -9,7 +9,7 @@ public class VariableSave : MonoBehaviour {
     /// </summary>
     public int sex = 0;
     /// <summary>
-    /// 0:未入力 1:10代未満 2:10代 3:20代 4:30代 5:40代 6:50代以上
+    /// 0:未入力 1:7～9才 2:10～12才 3:13～19才 4:20代 5:30代 6:40代 7:50代 8:60代以上
     /// </summary>
     public int age = 0;
     /// <summary>
@@ -49,16 +49,19 @@ public class VariableSave : MonoBehaviour {
     public bool clear = false;
     /// <summary>
     /// アンケート01 VRについて知っていたか。
+    /// 0:未入力 1:はい 2:いいえ
     /// </summary>
-    public bool quesVR = false;
+    public int quesVR = 0;
     /// <summary>
     /// アンケート02 移動方法は理解できたか。
+    /// 0:未入力 1:はい 2:いいえ
     /// </summary>
-    public bool quesMove = false;
+    public int quesMove = 0;
     /// <summary>
     /// アンケート03 酔いは発生したか。
+    /// 0:未入力 1:はい 2:いいえ
     /// </summary>
-    public bool quesDrunk = false;
+    public int quesDrunk = 0;
 
     // Use this for initialization
     void Start () {
@@ -70,7 +73,7 @@ public class VariableSave : MonoBehaviour {
 	}
 
 
-    public void SaveVariableData(int sex, int age, float time, int floor, float deadPointX, float deadPointZ, int deadFire, int deadSmoke, int deadDraft, bool clear, bool QuesVR, bool QuesMove, bool QuesDrunk) {
+    public void SaveVariableData(int sex, int age, float time, int floor, float deadPointX, float deadPointZ, int deadFire, int deadSmoke, int deadDraft, bool clear, int QuesVR, int QuesMove, int QuesDrunk) {
 
         NCMBObject obj = new NCMBObject("VariableData");
 

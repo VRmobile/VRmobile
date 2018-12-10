@@ -16,27 +16,27 @@ public class MyButton : MonoBehaviour {
     }
 
     public void OnVRFalse() {
-        FindObjectOfType<VariableSave>().quesVR = false;
+        FindObjectOfType<VariableSave>().quesVR = 2;
     }
 
     public void OnVRTrue() {
-        FindObjectOfType<VariableSave>().quesVR = true;
+        FindObjectOfType<VariableSave>().quesVR = 1;
     }
 
     public void OnMoveFalse() {
-        FindObjectOfType<VariableSave>().quesMove = false;
+        FindObjectOfType<VariableSave>().quesMove = 2;
     }
 
     public void OnMoveTrue() {
-        FindObjectOfType<VariableSave>().quesMove = true;
+        FindObjectOfType<VariableSave>().quesMove = 1;
     }
 
     public void OnDrunkFalse() {
-        FindObjectOfType<VariableSave>().quesDrunk = false;
+        FindObjectOfType<VariableSave>().quesDrunk = 2;
     }
 
     public void OnDrunkTrue() {
-        FindObjectOfType<VariableSave>().quesDrunk = true;
+        FindObjectOfType<VariableSave>().quesDrunk = 1;
     }
 
     public void OnSave() {
