@@ -28,8 +28,8 @@ public class DataFetch : MonoBehaviour {
                 //成功時の処理
                 foreach (NCMBObject obj in objList) {
                     Debug.Log(
-                        ", Sex : " + obj["Sex"] +
                         ", Age : " + obj["Age"] +
+                        ", Sex : " + obj["Sex"] +
                         ", Time : " + obj["Time"] +
                         ", Floor : " + obj["Floor"] +
                         ", DeadPointX : " + obj["DeadPointX"] +
@@ -39,8 +39,9 @@ public class DataFetch : MonoBehaviour {
                         ", DeadDraft : " + obj["DeadDraft"] +
                         ", Clear : " + obj["Clear"] +
                         ", QuesVR : " + obj["QuesVR"] +
+                        ", QuesDrunk : " + obj["QuesDrunk"] +
                         ", QuesMove : " + obj["QuesMove"] +
-                        ", QuesDrunk : " + obj["QuesDrunk"]
+                        ", QuesMoveNot : " + obj["QuesMoveNot"]
                         );
                 }
             }

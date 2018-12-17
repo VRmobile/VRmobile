@@ -5,13 +5,13 @@ using NCMB;
 
 public class VariableSave : MonoBehaviour {
     /// <summary>
-    /// 0:未入力 1:男性 2:女性
-    /// </summary>
-    public int sex = 0;
-    /// <summary>
     /// 0:未入力 1:7～9才 2:10～12才 3:13～19才 4:20代 5:30代 6:40代 7:50代 8:60代以上
     /// </summary>
     public int age = 0;
+    /// <summary>
+    /// 0:未入力 1:男性 2:女性
+    /// </summary>
+    public int sex = 0;
     /// <summary>
     /// クリアタイム
     /// </summary>
@@ -48,20 +48,29 @@ public class VariableSave : MonoBehaviour {
     /// </summary>
     public bool clear = false;
     /// <summary>
-    /// アンケート01 VRについて知っていたか。
+    /// アンケート01 VRを他にプレイしたことがあるか。
     /// 0:未入力 1:はい 2:いいえ
     /// </summary>
     public int quesVR = 0;
     /// <summary>
-    /// アンケート02 移動方法は理解できたか。
+    /// アンケート02 ゲームをプレイして気持ち悪くなったか。 
+    /// 0:未入力 1:はい 2:いいえ
+    /// </summary>
+    public int quesDrunk = 0;
+    /// <summary>
+    /// アンケート03 ゲームは全体を通して分かりやすかったか。
     /// 0:未入力 1:はい 2:いいえ
     /// </summary>
     public int quesMove = 0;
     /// <summary>
-    /// アンケート03 酔いは発生したか。
-    /// 0:未入力 1:はい 2:いいえ
+    /// アンケート03_1 何が分かりずらかったか。(3の質問でいいえを答えた人用)
+    /// 0:未入力 1:移動操作 2:消火器の使い方 3:しゃがみの仕方
     /// </summary>
-    public int quesDrunk = 0;
+    public int quesMoveNot = 0;
+
+
+
+
 
     // Use this for initialization
     void Start () {
@@ -73,12 +82,12 @@ public class VariableSave : MonoBehaviour {
 	}
 
 
-    public void SaveVariableData(int sex, int age, float time, int floor, float deadPointX, float deadPointZ, int deadFire, int deadSmoke, int deadDraft, bool clear, int QuesVR, int QuesMove, int QuesDrunk) {
+    public void SaveVariableData(int age, int sex, float time, int floor, float deadPointX, float deadPointZ, int deadFire, int deadSmoke, int deadDraft, bool clear, int QuesVR, int QuesDrunk, int QuesMove, int QuesMoveNot) {
 
         NCMBObject obj = new NCMBObject("VariableData");
 
-        obj.Add("Sex", sex);
         obj.Add("Age", age);
+        obj.Add("Sex", sex);
         obj.Add("Time", time);
         obj.Add("Floor", floor);
         obj.Add("DeadPointX", deadPointX);
@@ -88,8 +97,9 @@ public class VariableSave : MonoBehaviour {
         obj.Add("DeadDraft" , deadDraft);
         obj.Add("Clear", clear);
         obj.Add("QuesVR" , quesVR);
-        obj.Add("QuesMove" , quesMove);
         obj.Add("QuesDrunk" , quesDrunk);
+        obj.Add("QuesMove" , quesMove);
+        obj.Add("QuesMoveNot" , quesMoveNot);
 
         obj.SaveAsync((NCMBException e) => {
 
@@ -105,7 +115,7 @@ public class VariableSave : MonoBehaviour {
     }
 
     public void Save() {
-        SaveVariableData(sex , age , time , floor , deadPointX , deadPointZ , deadFire , deadSmoke , deadDraft , clear, quesVR, quesMove, quesDrunk);
+        SaveVariableData(age , sex , time , floor , deadPointX , deadPointZ , deadFire , deadSmoke , deadDraft , clear, quesVR, quesDrunk, quesMove, quesMoveNot);
         Debug.Log("セーブしたよ");
     }
 
