@@ -109,6 +109,8 @@ public class VariableSave : MonoBehaviour {
         Debug.Log("セーブしたよ");
     }
 
+
+    //データに関する各項目の取得するための関数
     public static int getFireDead()
     {
         return deadFire;
