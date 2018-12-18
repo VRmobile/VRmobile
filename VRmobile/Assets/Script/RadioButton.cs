@@ -40,14 +40,14 @@ public class RadioButton : MonoBehaviour
         FindObjectOfType<VariableSave>().quesVR = 2;
     }
 
-    //ラジオボタンで操作がしやすいを指定
-    public void MoveTrue()
+    //ラジオボタンで分かりやすいを指定
+    public void GameTrue()
     {
         FindObjectOfType<VariableSave>().quesMove = 1;
 
     }
-    //ラジオボタンで操作がしにくいを指定
-    public void MoveFalse()
+    //ラジオボタンで分かりにくいを指定
+    public void GameFalse()
     {
         FindObjectOfType<VariableSave>().quesMove = 2;
 
@@ -63,4 +63,21 @@ public class RadioButton : MonoBehaviour
     {
         FindObjectOfType<VariableSave>().quesDrunk = 2;
     }
+
+    //操作がしにくいと指定
+    public void NotMove()
+    {
+        FindObjectOfType<VariableSave>().quesMoveNot = 1;
+    }
+    //消火器が使いにくかったと指定
+    public void NotFireExting()
+    {
+        FindObjectOfType<VariableSave>().quesMoveNot = 2;
+    }
+    //しゃがみがしにくいと指定
+    public void NotSquat()
+    {
+        FindObjectOfType<VariableSave>().quesMoveNot = 3;
+    }
+
 }

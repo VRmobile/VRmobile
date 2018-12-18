@@ -5,6 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MyButton : MonoBehaviour {
+    public enum State { Open, Close, UnUsed }
+
+    public State state { get; private set; }
+    public TweenScale open, close;
 
     /// ボタンをクリックした時の処理
     public void OnFalse() {
