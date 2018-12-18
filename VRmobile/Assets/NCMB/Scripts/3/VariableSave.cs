@@ -68,6 +68,8 @@ public class VariableSave : MonoBehaviour {
     /// </summary>
     public int quesMoveNot = 0;
 
+    public bool SOUSIN = false;
+
 
     // Use this for initialization
     void Start () {
@@ -76,6 +78,18 @@ public class VariableSave : MonoBehaviour {
         deadSmoke = MainDataManager.getSmokeDead();
         deadDraft = MainDataManager.getDraftDead();
 	}
+
+    void Update() {
+
+        if (Input.GetKeyDown(KeyCode.S)) {
+            SOUSIN = true;
+        }
+
+        if (SOUSIN) {
+            Save();
+            SOUSIN = false;
+        }
+    }
 
 
     public void SaveVariableData(int age, int sex, float time, int floor, float deadPointX, float deadPointZ, int deadFire, int deadSmoke, int deadDraft, bool clear, int QuesVR, int QuesDrunk, int QuesMove, int QuesMoveNot) {

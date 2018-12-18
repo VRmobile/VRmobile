@@ -55,17 +55,17 @@ public class GraphQuesMove : MonoBehaviour {
             else {
                 //成功時の処理
                 foreach (NCMBObject obj in objList) {
-                    bool s = System.Convert.ToBoolean(obj["QuesMove"]);
+                    int s = System.Convert.ToInt32(obj["QuesMove"]);
 
                     Debug.Log(s);
                     num++;
 
                     switch (s) {
-                        case false:
+                        case 1:
                         trg[0]++;
                         break;
 
-                        case true:
+                        case 2:
                         trg[1]++;
                         break;
 
