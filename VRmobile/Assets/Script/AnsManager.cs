@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class AnsManager : MonoBehaviour {
 
-    public GameObject ageAns;
-    public GameObject sexAns;
+    public GameObject AgeAns;
+    public GameObject SexAns;
     public GameObject VRAns;
     public GameObject DrunkAns;
     public GameObject GameAns;
@@ -19,37 +19,75 @@ public class AnsManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        ANSTEXT(AgeAns, FindObjectOfType<VariableSave>().age,3 );
+        ANSTEXT(SexAns, FindObjectOfType<VariableSave>().sex, 1);
+        ANSTEXT(VRAns, FindObjectOfType<VariableSave>().quesVR, 2);
+        ANSTEXT(DrunkAns, FindObjectOfType<VariableSave>().quesDrunk, 2);
+        ANSTEXT(GameAns, FindObjectOfType<VariableSave>().quesMove, 2);
+        ANSTEXT(GameTriAns, FindObjectOfType<VariableSave>().quesMoveNot, 4);
+    }
 
-    void Hei(GameObject hei ,int quesNum ,int quesAns)
+    void ANSTEXT(GameObject hei ,int quesNum ,int quesAns)
     {
         Text Text = hei.GetComponent<Text>();
         switch (quesNum)
         {
-            case 0:
-                Text.text = "未回答";
-                break;
             case 1:
                 if (quesAns == 1)
                 {
                     Text.text = "男性";
                 }
-                else
+                else if(quesAns == 2)
                 {
                     Text.text = "はい";
+                }
+                else if(quesAns == 3)
+                {
+                    Text.text = "7～9";
+                }
+                else
+                {
+                    Text.text = "移動操作";
                 }
                 break;
             case 2:
                 if (quesAns == 1)
                 {
-                    Text.text = "男性";
+                    Text.text = "女性";
+                }
+                else if(quesAns == 2)
+                {
+                    Text.text = "いいえ";
+                }
+                else if(quesAns == 3)
+                {
+                    Text.text = "10～12";
                 }
                 else
                 {
-                    Text.text = "はい";
+                    Text.text = "消火器の使い方";
                 }
                 break;
+            case 3:
+                Text.text = "13～19";
+                Text.text = "しゃがみの仕方";
+                break;
+            case 4:
+                Text.text = "20代";
+                break;
+            case 5:
+                Text.text = "30代";
+                break;
+            case 6:
+                Text.text = "40代";
+                break;
+            case 7:
+                Text.text = "50代";
+                break;
+            case 8:
+                Text.text = "60代以上";
+                break;
+
 
 
         }
