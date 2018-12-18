@@ -4,7 +4,6 @@ using System.Collections;
 
 public class RadioButton : MonoBehaviour
 {
-
     void Start()
     {
 
@@ -14,8 +13,7 @@ public class RadioButton : MonoBehaviour
     void Update()
     {
         Toggle tgl = GetComponent<Toggle>();
-        bool act = tgl.isOn;
-        Debug.Log(act);
+        //bool act = tgl.isOn;
     }
 
     //ラジオボタンで性別男性に指定
@@ -44,13 +42,11 @@ public class RadioButton : MonoBehaviour
     public void GameTrue()
     {
         FindObjectOfType<VariableSave>().quesMove = 1;
-
     }
     //ラジオボタンで分かりにくいを指定
     public void GameFalse()
     {
         FindObjectOfType<VariableSave>().quesMove = 2;
-
     }
     //ラジオボタンで酔ったと指定
     public void DrunkTrue()

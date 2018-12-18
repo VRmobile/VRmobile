@@ -25,7 +25,22 @@ public class Popup : MonoBehaviour
 
     public void Open ()
     {
-        open.Play ();
+        if (FindObjectOfType<VariableSave>().age == 0 ||
+           FindObjectOfType<VariableSave>().sex == 0 ||
+           FindObjectOfType<VariableSave>().quesVR == 0 ||
+           FindObjectOfType<VariableSave>().quesDrunk == 0 ||
+           FindObjectOfType<VariableSave>().quesMove == 0)
+        {
+
+        }
+        else
+        {
+            open.Play();
+
+        }
+        
+       
+        FindObjectOfType<ErrorManager>().Flg = true;
     }
 
     public void Close ()

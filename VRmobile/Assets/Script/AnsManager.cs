@@ -69,20 +69,54 @@ public class AnsManager : MonoBehaviour {
                 }
                 break;
             case 3:
-                Text.text = "13～19";
-                Text.text = "しゃがみの仕方";
+                if(quesAns == 3)
+                {
+                    Text.text = "13～19";
+                }
+                else
+                {
+                    Text.text = "しゃがみの仕方";
+                }
                 break;
             case 4:
-                Text.text = "20代";
+                if (quesAns == 3)
+                {
+                    Text.text = "20代";
+                }
+                else
+                {
+                    Text.text = "移動操作、消火器の使い方";
+                }
                 break;
             case 5:
-                Text.text = "30代";
+                if (quesAns==3)
+                {
+                    Text.text = "30代";
+                }
+                else
+                {
+                    Text.text = "消火器の使い方、しゃがみの仕方";
+                }
                 break;
             case 6:
-                Text.text = "40代";
+                if (quesAns == 3)
+                {
+                    Text.text = "40代";
+                }
+                else
+                {
+                    Text.text = "移動操作、しゃがみの仕方";
+                }
                 break;
             case 7:
-                Text.text = "50代";
+                if (quesAns == 3)
+                {
+                    Text.text = "50代";
+                }
+                else
+                {
+                    Text.text = "移動操作、消火器の使い方、しゃがみの仕方";
+                }
                 break;
             case 8:
                 Text.text = "60代以上";
