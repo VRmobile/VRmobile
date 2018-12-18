@@ -67,17 +67,31 @@ public class RadioButton : MonoBehaviour
     //操作がしにくいと指定
     public void NotMove()
     {
-        FindObjectOfType<VariableSave>().quesMoveNot = 1;
+        if (FindObjectOfType<QuesMoveNotSelect>().sel[0] == false) {
+            FindObjectOfType<QuesMoveNotSelect>().sel[0] = true;
+        }else {
+            FindObjectOfType<QuesMoveNotSelect>().sel[0] = false;
+        }
     }
     //消火器が使いにくかったと指定
     public void NotFireExting()
     {
-        FindObjectOfType<VariableSave>().quesMoveNot = 2;
+        if (FindObjectOfType<QuesMoveNotSelect>().sel[1] == false) {
+            FindObjectOfType<QuesMoveNotSelect>().sel[1] = true;
+        }
+        else {
+            FindObjectOfType<QuesMoveNotSelect>().sel[1] = false;
+        }
     }
     //しゃがみがしにくいと指定
     public void NotSquat()
     {
-        FindObjectOfType<VariableSave>().quesMoveNot = 3;
+        if (FindObjectOfType<QuesMoveNotSelect>().sel[2] == false) {
+            FindObjectOfType<QuesMoveNotSelect>().sel[2] = true;
+        }
+        else {
+            FindObjectOfType<QuesMoveNotSelect>().sel[2] = false;
+        }
     }
 
 }

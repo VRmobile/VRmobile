@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4579798160061946}
   - component: {fileID: 114652924593833508}
   - component: {fileID: 114423267391480974}
+  - component: {fileID: 114123787195970860}
   m_Layer: 0
   m_Name: DataSave
   m_TagString: Untagged
@@ -41,6 +42,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114123787195970860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107665698324536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e540dfecd9266374bbedcdd1d7225ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sel: 000000
+  send: 0
 --- !u!114 &114423267391480974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -63,13 +77,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455a238949f7cd14881f9e55ae433882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sex: 0
   age: 0
+  sex: 0
   time: 0
   floor: 0
   deadPointX: 0
   deadPointZ: 0
-  deadFire: 0
-  deadSmoke: 0
-  deadDraft: 0
   clear: 0
+  quesVR: 0
+  quesDrunk: 0
+  quesMove: 0
+  quesMoveNot: 0
