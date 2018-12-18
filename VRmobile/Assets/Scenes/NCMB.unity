@@ -1626,6 +1626,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114652924593833508, guid: 6e6cd7d4346e46744bb7862bd3faf132,
+        type: 2}
+      propertyPath: quesMoveNot.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4579798160061946, guid: 6e6cd7d4346e46744bb7862bd3faf132, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2300,9 +2305,9 @@ RectTransform:
   m_Father: {fileID: 1594526987}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1321069777 stripped
@@ -3098,7 +3103,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 46, y: 365.00006}
-  m_SizeDelta: {x: 100, y: 1200}
+  m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1594526988
 MonoBehaviour:

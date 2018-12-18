@@ -64,12 +64,9 @@ public class VariableSave : MonoBehaviour {
     public int quesMove = 0;
     /// <summary>
     /// アンケート03_1 何が分かりずらかったか。(3の質問でいいえを答えた人用)
-    /// 0:未入力 1:移動操作 2:消火器の使い方 3:しゃがみの仕方
+    /// 0:未入力 1:移動操作 2:消火器の使い方 3:しゃがみの仕方 4:1+2 5:2+3 6:1+3 7:全部
     /// </summary>
     public int quesMoveNot = 0;
-
-
-
 
 
     // Use this for initialization
@@ -78,7 +75,6 @@ public class VariableSave : MonoBehaviour {
         deadFire = MainDataManager.getFireDead();
         deadSmoke = MainDataManager.getSmokeDead();
         deadDraft = MainDataManager.getDraftDead();
-        Debug.Log(deadFire);
 	}
 
 
