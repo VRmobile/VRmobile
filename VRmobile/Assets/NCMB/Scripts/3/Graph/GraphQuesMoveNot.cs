@@ -61,19 +61,35 @@ public class GraphQuesMoveNot : MonoBehaviour {
 
                     switch (s) {
                         case 0:
-                        trg[0]++;
+
                         break;
 
                         case 1:
-                        trg[1]++;
+                        trg[0]++;
                         break;
 
                         case 2:
-                        trg[2]++;
+                        trg[1]++;
                         break;
 
                         case 3:
+                        trg[2]++;
+                        break;
+
+                        case 4:
                         trg[3]++;
+                        break;
+
+                        case 5:
+                        trg[4]++;
+                        break;
+
+                        case 6:
+                        trg[5]++;
+                        break;
+
+                        case 7:
+                        trg[6]++;
                         break;
 
                         default:
@@ -84,20 +100,31 @@ public class GraphQuesMoveNot : MonoBehaviour {
                     Debug.Log("1は" + trg[1] + "回");
                     Debug.Log("2は" + trg[2] + "回");
                     Debug.Log("3は" + trg[3] + "回");
-                    
+                    Debug.Log("4は" + trg[4] + "回");
+                    Debug.Log("5は" + trg[5] + "回");
+                    Debug.Log("6は" + trg[6] + "回");
+                    Debug.Log("7は" + trg[7] + "回");
                 }
 
                 Debug.Log(num + "回呼んだよ");
 
-                float a = (float)trg[0] / (float)num * (float)100;
-                float b = (float)trg[1] / (float)num * (float)100;
-                float c = (float)trg[2] / (float)num * (float)100;
-                float d = (float)trg[3] / (float)num * (float)100;
+                float a  = (float)trg[0] / (float)num * (float)100;
+                float b  = (float)trg[1] / (float)num * (float)100;
+                float c  = (float)trg[2] / (float)num * (float)100;
+                float d  = (float)trg[3] / (float)num * (float)100;
+                float ee = (float)trg[4] / (float)num * (float)100;
+                float f  = (float)trg[5] / (float)num * (float)100;
+                float g  = (float)trg[6] / (float)num * (float)100;
+                float h  = (float)trg[7] / (float)num * (float)100;
 
                 ratio[0] = a;
                 ratio[1] = b;
                 ratio[2] = c;
                 ratio[3] = d;
+                ratio[4] = ee;
+                ratio[5] = f;
+                ratio[6] = g;
+                ratio[7] = h;
 
                 Array.Sort(ratio);
                 Array.Reverse(ratio);
@@ -106,21 +133,33 @@ public class GraphQuesMoveNot : MonoBehaviour {
                 Text val01 = text[1].GetComponent<Text>();
                 Text val02 = text[2].GetComponent<Text>();
                 Text val03 = text[3].GetComponent<Text>();
+                Text val04 = text[4].GetComponent<Text>();
+                Text val05 = text[5].GetComponent<Text>();
+                Text val06 = text[6].GetComponent<Text>();
 
                 Text ratio01 = textRatio[0].GetComponent<Text>();
                 Text ratio02 = textRatio[1].GetComponent<Text>();
                 Text ratio03 = textRatio[2].GetComponent<Text>();
                 Text ratio04 = textRatio[3].GetComponent<Text>();
+                Text ratio05 = textRatio[4].GetComponent<Text>();
+                Text ratio06 = textRatio[5].GetComponent<Text>();
+                Text ratio07 = textRatio[6].GetComponent<Text>();
 
                 val.text = "" + trg[0];
                 val01.text = "" + trg[1];
                 val02.text = "" + trg[2];
                 val03.text = "" + trg[3];
+                val04.text = "" + trg[4];
+                val05.text = "" + trg[5];
+                val06.text = "" + trg[6];
 
-                ratio01.text = "" + a + "%";
-                ratio02.text = "" + b + "%";
-                ratio03.text = "" + c + "%";
-                ratio04.text = "" + d + "%";
+                ratio01.text = "" + a  + "%";
+                ratio02.text = "" + b  + "%";
+                ratio03.text = "" + c  + "%";
+                ratio04.text = "" + d  + "%";
+                ratio05.text = "" + ee + "%";
+                ratio06.text = "" + f  + "%";
+                ratio07.text = "" + g  + "%";
 
             }
         });

@@ -55,27 +55,27 @@ public class GraphQuesVR : MonoBehaviour {
             else {
                 //成功時の処理
                 foreach (NCMBObject obj in objList) {
-                    bool s = System.Convert.ToBoolean(obj["QuesVR"]);
+                    int s = System.Convert.ToInt32(obj["QuesVR"]);
 
                     Debug.Log(s);
                     num++;
 
                     switch (s) {
-                        case false:
+                        case 1:
                         trg[0]++;
                         break;
 
-                        case true:
+                        case 2:
                         trg[1]++;
                         break;
 
                         default:
                         break;
                     }
-                    /*
-                    Debug.Log("trueは" + trg[0] + "回");
-                    Debug.Log("falseは" + trg[1] + "回");
-                    */
+                    
+                    //Debug.Log("VRtrueは" + trg[0] + "回");
+                    //Debug.Log("VRfalseは" + trg[1] + "回");
+                    
                 }
 
                 //Debug.Log(num + "回呼んだよ");

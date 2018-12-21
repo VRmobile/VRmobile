@@ -55,17 +55,17 @@ public class GraphQuesDrunk : MonoBehaviour {
             else {
                 //成功時の処理
                 foreach (NCMBObject obj in objList) {
-                    bool s = System.Convert.ToBoolean(obj["QuesVR"]);
+                    int s = System.Convert.ToInt32(obj["QuesVR"]);
 
                     Debug.Log(s);
                     num++;
 
                     switch (s) {
-                        case false:
+                        case 1:
                         trg[0]++;
                         break;
 
-                        case true:
+                        case 2:
                         trg[1]++;
                         break;
 
