@@ -33,19 +33,24 @@ public class VRTeleporter : MonoBehaviour
 
     private bool displayActive = false; // don't update path when it's false.
 
+    private bool teleportFlg = false;   //テレポートを許可するフラグ
+
 
     // Teleport target transform to ground position
     public void Teleport()
     {
         if (groundDetected)
         {
-            if (Player.squatFlg == true)
+            if (teleportFlg == true)
             {
-                bodyTransforn.position = groundPos + lastNormal * 3.2f;
-            }
-            else
-            {
-                bodyTransforn.position = groundPos + lastNormal * 5.0f;
+                if (Player.squatFlg == true)
+                {
+                    bodyTransforn.position = groundPos + lastNormal * 3.2f;
+                }
+                else
+                {
+                    bodyTransforn.position = groundPos + lastNormal * 5.0f;
+                }
             }
         }
         else
@@ -110,23 +115,30 @@ public class VRTeleporter : MonoBehaviour
             // linecast between last vertex and current vertex
             if (Physics.Linecast(pos, newPos, out hit, ~excludeLayers))
             {
+                groundDetected = true;
+                groundPos = hit.point;
+                lastNormal = hit.normal;
                 Debug.Log(FindObjectOfType<Player>().smokeTeleportFlg);
                 if (MainDataManager.floor == 2 && FindObjectOfType<Player>().smokeTeleportFlg == true)
                 {
                     if (hit.transform.name == "SmokeTeleport")
                     {
-                        groundDetected = true;
-                        groundPos = hit.point;
-                        lastNormal = hit.normal;
+                        teleportFlg = true;
+                    }
+                    else
+                    {
+                        teleportFlg = false;
                     }
                 }
                 else if (MainDataManager.floor == 2 && FindObjectOfType<Player>().smokeTeleportFlg == false)
                 {
                     if (hit.transform.name == "teleport2")
                     {
-                        groundDetected = true;
-                        groundPos = hit.point;
-                        lastNormal = hit.normal;
+                        teleportFlg = true;
+                    }
+                    else
+                    {
+                        teleportFlg = false;
                     }
                 }
                 
@@ -134,9 +146,11 @@ public class VRTeleporter : MonoBehaviour
                 {
                     if (hit.transform.name == "teleport1")
                     {
-                        groundDetected = true;
-                        groundPos = hit.point;
-                        lastNormal = hit.normal;
+                        teleportFlg = true;
+                    }
+                    else
+                    {
+                        teleportFlg = false;
                     }
                 }
                 
