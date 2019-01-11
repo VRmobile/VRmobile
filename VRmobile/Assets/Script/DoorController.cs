@@ -85,7 +85,7 @@ public class DoorController : MonoBehaviour
 
     void Clear()
     {
-        //SceneManager.LoadScene("NCMB");
+        SceneManager.LoadScene("NCMB");
         Debug.Log("Clear");
     }
 }

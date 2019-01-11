@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Ded : MonoBehaviour
 {
+
     public static int Dedpoint = 0;
 
     public GameObject panel;
@@ -57,10 +58,12 @@ public class Ded : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        fede.FadeOut();
+        
         switch (Dedpoint)
         {
             case 1:
-                fede.Fead();
+                fede.FeadIn();
                 if (ONE)
                 {
                     MainDataManager.smokeDead++;
@@ -69,8 +72,9 @@ public class Ded : MonoBehaviour
                 
                 break;
             case 2:
-                fede.Fead();
-                if (ONE)
+            
+            fede.FeadIn();
+            if (ONE)
                 {
                     MainDataManager.fireDead++;
                     ONE = false;
@@ -79,7 +83,7 @@ public class Ded : MonoBehaviour
                 break;
             //バックドラフト
             case 3:
-                fede.Fead();
+                fede.FeadIn();
                 if (ONE)
                 {
                     MainDataManager.draftDead++;

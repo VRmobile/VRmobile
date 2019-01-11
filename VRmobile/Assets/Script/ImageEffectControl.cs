@@ -77,7 +77,7 @@ public class ImageEffectControl : MonoBehaviour
             if (deadTime >= 250)
             {
 
-                fede.Fead();
+                fede.FeadIn();
                 Ded.Dedpoint = 1;
                 Debug.Log(trg);
 

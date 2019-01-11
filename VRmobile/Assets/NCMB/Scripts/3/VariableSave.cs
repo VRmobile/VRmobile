@@ -31,17 +31,14 @@ public class VariableSave : MonoBehaviour {
     /// <summary>
     /// 火の死亡回数
     /// </summary>
-    [SerializeField]
     public  static int deadFire = 0;
     /// <summary>
     /// 煙の死亡回数
     /// </summary>
-    [SerializeField]
     public static int deadSmoke = 0;
     /// <summary>
     /// ドラフトの死亡回数
     /// </summary>
-    [SerializeField]
     public static int deadDraft = 0;
     /// <summary>
     /// クリアしたか
@@ -80,7 +77,8 @@ public class VariableSave : MonoBehaviour {
 	}
 
     void Update() {
-
+        Debug.Log("火" + deadFire);
+        Debug.Log("煙" + deadSmoke);
         if (Input.GetKeyDown(KeyCode.S)) {
             SOUSIN = true;
         }

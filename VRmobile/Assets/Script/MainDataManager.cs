@@ -16,9 +16,9 @@ public class MainDataManager : MonoBehaviour {
     void Start()
     {
         floor = 2;
-        fireDead = VariableSave.getFireDead();
-        smokeDead = VariableSave.getSmokeDead();
-        draftDead = VariableSave.getDraftDead();
+        fireDead = getFireDead();
+        smokeDead = getSmokeDead();
+        draftDead = getDraftDead();
         clear = false;
     }
     // Update is called once per frame

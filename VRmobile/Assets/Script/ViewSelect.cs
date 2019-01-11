@@ -27,7 +27,7 @@ public class ViewSelect : MonoBehaviour {
 	void Update () {
         if(Ded.Dedpoint != 0)
         {
-            Invoke("View", 2.0f);
+            Invoke("View", 2.5f);
         }
     }
 
