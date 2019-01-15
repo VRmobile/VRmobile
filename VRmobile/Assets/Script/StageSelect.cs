@@ -28,7 +28,7 @@ public class StageSelect : MonoBehaviour {
         {
             nomal.transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
             miniGame.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
-            if (VvrController.AppButtonDown() || Input.GetKeyDown(KeyCode.Space))
+            if (VvrController.AppButtonDown() || Input.GetMouseButtonDown(0))
             {
 
                 MainDataManager.floor = 2;
