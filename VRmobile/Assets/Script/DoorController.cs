@@ -9,6 +9,10 @@ public class DoorController : MonoBehaviour
     public float openSpeed; //ドアオープンスピード
     public bool doorOpen; //ドアチェック
     private float yDegree; //ドア回転角
+
+    public GameObject panel;
+    FadeScript fede;
+
     [SerializeField]
     private bool backDraftTrg = false;
     [SerializeField]
@@ -21,6 +25,7 @@ public class DoorController : MonoBehaviour
         doorOpen = false;
         yDegree = 0.0F;
         draftParticle.Stop();
+        fede = panel.GetComponent<FadeScript>();
     }
     void Update()
     {
@@ -37,8 +42,7 @@ public class DoorController : MonoBehaviour
         {
             if (clearFlg == true)
             {
-               
-                Invoke("Clear", 5.0f);
+                //Invoke("Clear", 5.0f);
                 if (yDegree < 90.0F)
                 {
                     yDegree += openSpeed * Time.deltaTime;
@@ -48,6 +52,8 @@ public class DoorController : MonoBehaviour
                 }
                 if(yDegree > 90.0F)
                 {
+                    fede.FeadIn();
+                   // FindObjectOfType<ViewSelect>().MainView.SetActive(false);
                     FindObjectOfType<ViewSelect>().ClearView.SetActive(true);
                 }
 

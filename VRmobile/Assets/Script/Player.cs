@@ -5,6 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     private Vector3 VREye;
     public VRTeleporter teleporter;
+    public Camera mainCamera;
+
+    public float squatAngleX = 20.0f;
     public static bool squatFlg;                      //しゃがんでいるかどうか
     bool smokeFlg;                                    //煙範囲内にいるかどうか
     public bool smokeTeleportFlg;
@@ -58,6 +61,7 @@ public class Player : MonoBehaviour {
     void Update () {
 
         VREye = this.transform.position;
+        float x = mainCamera.transform.eulerAngles.x;
 
         //移動処理
         if (Input.GetMouseButtonDown(0)|| VvrController.AppButtonDown())
@@ -71,12 +75,17 @@ public class Player : MonoBehaviour {
         }
 
         //しゃがむ処理部分
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false|| VvrController.HomeButtonDown() && squatFlg == false)
+        Debug.Log(x);
+        /*
+        if (squatAngleX < x && x < 90.0f) {
+            Debug.Log("しゃがむ");
+        }*/
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false|| VvrController.HomeButtonDown() && squatFlg == false|| squatAngleX < x && x < 90.0f && squatFlg == false)
         {
             this.transform.position = new Vector3(VREye.x, VREye.y - 2.0f, VREye.z);
             squatFlg = true;
         }
-        else if(Input.GetKeyDown(KeyCode.LeftArrow)&& squatFlg == true || VvrController.HomeButtonDown() && squatFlg == true)
+        else if(Input.GetKeyDown(KeyCode.LeftArrow)&& squatFlg == true || VvrController.HomeButtonDown() && squatFlg == true|| 320.0f < x && x < 340.0f && squatFlg == true)
         {
             this.transform.position = new Vector3(VREye.x, VREye.y + 2.0f, VREye.z);
             squatFlg = false;

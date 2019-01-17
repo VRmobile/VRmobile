@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class StartCameraController : MonoBehaviour
 {
+    private GUIStyle labelStyle;
     public static Quaternion ini_gyro;
 
     [SerializeField]
@@ -11,7 +12,9 @@ public class StartCameraController : MonoBehaviour
 
     void Start()
     {
-
+        this.labelStyle = new GUIStyle();
+        this.labelStyle.fontSize = Screen.height / 22;
+        this.labelStyle.normal.textColor = Color.white;
     }
 
     void Update()

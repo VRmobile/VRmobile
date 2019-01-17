@@ -40734,6 +40734,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleporter: {fileID: 494214288}
+  mainCamera: {fileID: 340073843}
+  squatAngleX: 80
   smokeTeleportFlg: 0
 --- !u!1 &1104074829
 GameObject:
@@ -58242,6 +58244,7 @@ MonoBehaviour:
   draftParticle: {fileID: 2083629641}
   openSpeed: 30
   doorOpen: 0
+  panel: {fileID: 937898676}
   backDraftTrg: 0
   clearFlg: 1
   doorOpenFlg: 1
