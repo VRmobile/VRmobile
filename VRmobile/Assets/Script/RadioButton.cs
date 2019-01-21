@@ -47,6 +47,7 @@ public class RadioButton : MonoBehaviour
     public void GameFalse()
     {
         FindObjectOfType<VariableSave>().quesMove = 2;
+        FindObjectOfType<ErrorManager>().GameNotTri.SetActive(true);
     }
     //ラジオボタンで酔ったと指定
     public void DrunkTrue()

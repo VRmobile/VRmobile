@@ -335,7 +335,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9805\u76EE\u304C\u5165\u529B\u3055\u308C\u3066\u3044\u307E\u305B\u3093\u3002"
+  m_Text: "\u5E74\u9F62\u304C\u5165\u529B\u3055\u308C\u3066\u3044\u307E\u305B\u3093\u3002"
 --- !u!222 &70903763
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -940,7 +940,7 @@ Prefab:
     - target: {fileID: 114770711511610852, guid: 49213183815735f45bda0cc85ecb3914,
         type: 2}
       propertyPath: m_Text
-      value: "\u30B2\u30FC\u30E0\u3092\u3057\u3066\u6C17\u6301\u3061\u60AA\u304F\u306A\u308A\u307E\u3057\u305F\u304B\uFF1F"
+      value: "  4.\u30B2\u30FC\u30E0\u3092\u3057\u3066\u6C17\u6301\u3061\u60AA\u304F\u306A\u308A\u307E\u3057\u305F\u304B\uFF1F"
       objectReference: {fileID: 0}
     - target: {fileID: 224164299804657100, guid: 49213183815735f45bda0cc85ecb3914,
         type: 2}
@@ -1108,7 +1108,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 341448109}
-  - component: {fileID: 341448111}
   - component: {fileID: 341448110}
   m_Layer: 5
   m_Name: ErrorManager
@@ -1154,21 +1153,6 @@ MonoBehaviour:
   - {fileID: 1774068844}
   - {fileID: 985068497}
   GameNotTri: {fileID: 527507882}
-  Flg: 0
-  NotFlg: 0
---- !u!114 &341448111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 341448108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f10ff5427df6a6f45add7034242c2f54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Error: []
-  GameNotTri: {fileID: 0}
   Flg: 0
   NotFlg: 0
 --- !u!224 &386620482 stripped
@@ -1521,7 +1505,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9805\u76EE\u304C\u5165\u529B\u3055\u308C\u3066\u3044\u307E\u305B\u3093\u3002"
+  m_Text: "\u6027\u5225\u304C\u5165\u529B\u3055\u308C\u3066\u3044\u307E\u305B\u3093\u3002"
 --- !u!222 &482098546
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2149,7 +2133,7 @@ Prefab:
     - target: {fileID: 114770711511610852, guid: 49213183815735f45bda0cc85ecb3914,
         type: 2}
       propertyPath: m_Text
-      value: "\u6027\u5225"
+      value: "2.\u6027\u5225"
       objectReference: {fileID: 0}
     - target: {fileID: 114770711511610852, guid: 49213183815735f45bda0cc85ecb3914,
         type: 2}
@@ -3460,7 +3444,7 @@ Prefab:
     - target: {fileID: 114770711511610852, guid: 49213183815735f45bda0cc85ecb3914,
         type: 2}
       propertyPath: m_Text
-      value: "VR\u3092\u4ED6\u306B\u30D7\u30EC\u30A4\u3057\u305F\u3053\u3068\u304C\u3042\u308A\u307E\u3059\u304B\uFF1F"
+      value: " 3.VR\u3092\u4ED6\u306B\u30D7\u30EC\u30A4\u3057\u305F\u3053\u3068\u304C\u3042\u308A\u307E\u3059\u304B\uFF1F"
       objectReference: {fileID: 0}
     - target: {fileID: 224164299804657100, guid: 49213183815735f45bda0cc85ecb3914,
         type: 2}
@@ -3615,7 +3599,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5E74\u9F62"
+  m_Text: "1.\u5E74\u9F62"
 --- !u!222 &1132955085
 CanvasRenderer:
   m_ObjectHideFlags: 0

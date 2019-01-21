@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     private Vector3 VREye;
     public VRTeleporter teleporter;
     public Camera mainCamera;
-
-    public float squatAngleX = 20.0f;
+    public GameObject circleGage;
     public static bool squatFlg;                      //しゃがんでいるかどうか
     bool smokeFlg;                                    //煙範囲内にいるかどうか
     public bool smokeTeleportFlg;
@@ -18,6 +18,8 @@ public class Player : MonoBehaviour {
         squatFlg = false;
         smokeFlg = false;
         smokeTeleportFlg = false;
+        circleGage.SetActive(false);
+        circleGage.GetComponent<Image>().fillAmount = 0;
     }
 
     void OnTriggerStay(Collider other)
@@ -75,23 +77,25 @@ public class Player : MonoBehaviour {
         }
 
         //しゃがむ処理部分
-        Debug.Log(x);
-        /*
-        if (squatAngleX < x && x < 90.0f) {
-            Debug.Log("しゃがむ");
-        }*/
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false|| VvrController.HomeButtonDown() && squatFlg == false|| squatAngleX < x && x < 90.0f && squatFlg == false)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false|| VvrController.HomeButtonDown() && squatFlg == false|| 70.0f < x && x < 90.0f && squatFlg == false)
         {
-            this.transform.position = new Vector3(VREye.x, VREye.y - 2.0f, VREye.z);
-            squatFlg = true;
+            //下を向くとサークルゲージが増加し最大になるとしゃがむ
+            circleGage.SetActive(true);
+            circleGage.GetComponent<Image>().fillAmount += 0.01f;
+            if(circleGage.GetComponent<Image>().fillAmount == 1.00f) {
+                this.transform.position = new Vector3(VREye.x , VREye.y - 2.0f , VREye.z);
+                squatFlg = true;
+            }
         }
         else if(Input.GetKeyDown(KeyCode.LeftArrow)&& squatFlg == true || VvrController.HomeButtonDown() && squatFlg == true|| 320.0f < x && x < 340.0f && squatFlg == true)
         {
             this.transform.position = new Vector3(VREye.x, VREye.y + 2.0f, VREye.z);
             squatFlg = false;
         }
-
-
+        else {
+            circleGage.GetComponent<Image>().fillAmount = 0;
+            circleGage.SetActive(true);
+        }
 
         //けむりに当たってからの処理
         if (smokeFlg == true)

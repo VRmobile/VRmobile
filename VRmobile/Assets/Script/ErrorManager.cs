@@ -16,6 +16,7 @@ public class ErrorManager : MonoBehaviour {
         }
         NotFlg = false;
         Flg = false;
+        GameNotTri.SetActive(false);
 	}
 	
 	// Update is called once per frame

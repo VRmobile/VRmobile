@@ -47,7 +47,6 @@ public class FadeScript : MonoBehaviour
             if (fadeIn) {
                 GetComponent<Image>().color = new Color(red , green , blue , alfa);
                 alfa += speed;
-                Debug.Log("nda");
 
             }
         }
@@ -55,7 +54,6 @@ public class FadeScript : MonoBehaviour
 
     public void FadeOut() {
         if (ONE) {
-            Debug.Log(alfa);
             if (alfa <= 2.5f) {
                 GetComponent<Image>().color = new Color(red , green , blue , alfa);
                 alfa -= 0.02f;
