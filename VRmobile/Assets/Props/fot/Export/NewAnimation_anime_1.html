@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript">
+	    function doPreview() {
+	        var canvas = document.getElementById("canvas");
+	        var ctx = canvas.getContext("2d");
+
+			var imglist = [
+				'./NewAnimation_anime_10000.png',
+				'./NewAnimation_anime_10001.png',
+				'./NewAnimation_anime_10002.png',
+				'./NewAnimation_anime_10003.png',
+				'./NewAnimation_anime_10004.png',
+				'./NewAnimation_anime_10005.png',
+				'./NewAnimation_anime_10006.png',
+				'./NewAnimation_anime_10007.png',
+				'./NewAnimation_anime_10008.png',
+				'./NewAnimation_anime_10009.png',
+				'./NewAnimation_anime_10010.png',
+
+			];
+			
+			var imglistsize = imglist.length;
+			var img = new Array(imglistsize);
+			for ( var i = 0 ; i < imglistsize ; i++ )
+			{
+				img[i] = new Image();
+				img[i].src = imglist[i];
+			}
+			
+			var cnt = 0;
+	        setInterval(function () {
+	            ctx.save();
+	            ctx.clearRect(-800, -768, 800 * 2, 768 * 2);
+				ctx.drawImage( img[cnt] , 0 , 0 );
+	            ctx.restore();
+				cnt++;
+				if (cnt >= imglistsize ) cnt = 0;
+	        }, 33);
+
+	    };
+	</script>
+</head>
+
+<body onLoad="doPreview()">
+    <div id="Screen" style="font-size:8px;text-align:center;"></div>
+	<canvas id="canvas" width="800" height="768">
+	</canvas>
+</body>
+
+</html>

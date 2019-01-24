@@ -89,8 +89,13 @@ public class Player : MonoBehaviour {
         }
         else if(Input.GetKeyDown(KeyCode.LeftArrow)&& squatFlg == true || VvrController.HomeButtonDown() && squatFlg == true|| 320.0f < x && x < 340.0f && squatFlg == true)
         {
-            this.transform.position = new Vector3(VREye.x, VREye.y + 2.0f, VREye.z);
-            squatFlg = false;
+            circleGage.SetActive(true);
+            circleGage.GetComponent<Image>().fillAmount += 0.01f;
+            if (circleGage.GetComponent<Image>().fillAmount == 1.00f)
+            {
+                this.transform.position = new Vector3(VREye.x, VREye.y + 2.0f, VREye.z);
+                squatFlg = false;
+            }
         }
         else {
             circleGage.GetComponent<Image>().fillAmount = 0;
