@@ -7,7 +7,7 @@ public class ErrorManager : MonoBehaviour {
     public GameObject[] Error;
     public GameObject GameNotTri;
     public bool Flg;
-    public bool NotFlg;
+    public bool NotFlg; 
 	// Use this for initialization
 	void Start () {
 		for(int i = 0; i <= Error.Length-1; i++)
@@ -70,7 +70,7 @@ public class ErrorManager : MonoBehaviour {
             }
 
             //いいえと答えた人への質問が入力されていない
-            if (FindObjectOfType<VariableSave>().quesMoveNot == 0)
+            if (FindObjectOfType<VariableSave>().quesMoveNot == 0 && NotFlg)
             {
                 Error[5].SetActive(true);
             }
