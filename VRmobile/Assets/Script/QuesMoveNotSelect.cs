@@ -58,25 +58,25 @@ public class QuesMoveNotSelect : MonoBehaviour {
 
         switch (send) {
             case 1:
-            FindObjectOfType<VariableSave>().quesMoveNot = 1;
+            FindObjectOfType<VariableSave>().db_quesMoveNot = 1;
             break;
             case 2:
-            FindObjectOfType<VariableSave>().quesMoveNot = 2;
+            FindObjectOfType<VariableSave>().db_quesMoveNot = 2;
             break;
             case 3:
-            FindObjectOfType<VariableSave>().quesMoveNot = 3;
+            FindObjectOfType<VariableSave>().db_quesMoveNot = 3;
             break;
             case 4:
-            FindObjectOfType<VariableSave>().quesMoveNot = 4;
+            FindObjectOfType<VariableSave>().db_quesMoveNot = 4;
             break;
             case 5:
-            FindObjectOfType<VariableSave>().quesMoveNot = 5;
+            FindObjectOfType<VariableSave>().db_quesMoveNot = 5;
             break;
             case 6:
-            FindObjectOfType<VariableSave>().quesMoveNot = 6;
+            FindObjectOfType<VariableSave>().db_quesMoveNot = 6;
             break;
             case 7:
-            FindObjectOfType<VariableSave>().quesMoveNot = 7;
+            FindObjectOfType<VariableSave>().db_quesMoveNot = 7;
             break;
         }
     }

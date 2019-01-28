@@ -25,11 +25,11 @@ public class Popup : MonoBehaviour
 
     public void Open ()
     {
-        if (FindObjectOfType<VariableSave>().age == 0 ||
-           FindObjectOfType<VariableSave>().sex == 0 ||
-           FindObjectOfType<VariableSave>().quesVR == 0 ||
-           FindObjectOfType<VariableSave>().quesDrunk == 0 ||
-           FindObjectOfType<VariableSave>().quesMove == 0)
+        if (FindObjectOfType<VariableSave>().db_age == 0 ||
+           FindObjectOfType<VariableSave>().db_sex == 0 ||
+           FindObjectOfType<VariableSave>().db_quesVR == 0 ||
+           FindObjectOfType<VariableSave>().db_quesDrunk == 0 ||
+           FindObjectOfType<VariableSave>().db_quesMove == 0)
         {
 
         }

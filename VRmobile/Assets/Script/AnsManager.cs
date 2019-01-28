@@ -19,12 +19,12 @@ public class AnsManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        ANSTEXT(AgeAns, FindObjectOfType<VariableSave>().age,3 );
-        ANSTEXT(SexAns, FindObjectOfType<VariableSave>().sex, 1);
-        ANSTEXT(VRAns, FindObjectOfType<VariableSave>().quesVR, 2);
-        ANSTEXT(DrunkAns, FindObjectOfType<VariableSave>().quesDrunk, 2);
-        ANSTEXT(GameAns, FindObjectOfType<VariableSave>().quesMove, 2);
-        ANSTEXT(GameTriAns, FindObjectOfType<VariableSave>().quesMoveNot, 4);
+        ANSTEXT(AgeAns, FindObjectOfType<VariableSave>().db_age , 3 );
+        ANSTEXT(SexAns, FindObjectOfType<VariableSave>().db_sex , 1);
+        ANSTEXT(VRAns, FindObjectOfType<VariableSave>().db_quesVR , 2);
+        ANSTEXT(DrunkAns, FindObjectOfType<VariableSave>().db_quesDrunk , 2);
+        ANSTEXT(GameAns, FindObjectOfType<VariableSave>().db_quesMove , 2);
+        ANSTEXT(GameTriAns, FindObjectOfType<VariableSave>().db_quesMoveNot , 4);
     }
 
     void ANSTEXT(GameObject hei ,int quesNum ,int quesAns)

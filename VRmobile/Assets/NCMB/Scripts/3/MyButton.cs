@@ -12,35 +12,35 @@ public class MyButton : MonoBehaviour {
 
     /// ボタンをクリックした時の処理
     public void OnFalse() {
-        FindObjectOfType<VariableSave>().clear = false;
+        FindObjectOfType<VariableSave>().db_clear = false;
     }
 
     public void OnTrue() {
-        FindObjectOfType<VariableSave>().clear = true;
+        FindObjectOfType<VariableSave>().db_clear = true;
     }
 
     public void OnVRFalse() {
-        FindObjectOfType<VariableSave>().quesVR = 2;
+        FindObjectOfType<VariableSave>().db_quesVR = 2;
     }
 
     public void OnVRTrue() {
-        FindObjectOfType<VariableSave>().quesVR = 1;
+        FindObjectOfType<VariableSave>().db_quesVR = 1;
     }
 
     public void OnMoveFalse() {
-        FindObjectOfType<VariableSave>().quesMove = 2;
+        FindObjectOfType<VariableSave>().db_quesMove = 2;
     }
 
     public void OnMoveTrue() {
-        FindObjectOfType<VariableSave>().quesMove = 1;
+        FindObjectOfType<VariableSave>().db_quesMove = 1;
     }
 
     public void OnDrunkFalse() {
-        FindObjectOfType<VariableSave>().quesDrunk = 2;
+        FindObjectOfType<VariableSave>().db_quesDrunk = 2;
     }
 
     public void OnDrunkTrue() {
-        FindObjectOfType<VariableSave>().quesDrunk = 1;
+        FindObjectOfType<VariableSave>().db_quesDrunk = 1;
     }
 
     public void OnSave() {

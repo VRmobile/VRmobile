@@ -19,47 +19,47 @@ public class RadioButton : MonoBehaviour
     //ラジオボタンで性別男性に指定
     public void Man()
     {
-        FindObjectOfType<VariableSave>().sex = 1;
+        FindObjectOfType<VariableSave>().db_sex = 1;
     }
     //ラジオボタンで性別女性に指定
     public void Woman()
     {
-        FindObjectOfType<VariableSave>().sex = 2;
+        FindObjectOfType<VariableSave>().db_sex = 2;
     }
 
     //ラジオボタンでVRを知っているを指定
     public void VRKnow()
     {
-        FindObjectOfType<VariableSave>().quesVR = 1;
+        FindObjectOfType<VariableSave>().db_quesVR = 1;
     }
     //ラジオボタンでVRを知らないを指定
     public void VRnotKnow()
     {
-        FindObjectOfType<VariableSave>().quesVR = 2;
+        FindObjectOfType<VariableSave>().db_quesVR = 2;
     }
 
     //ラジオボタンで分かりやすいを指定
     public void GameTrue()
     {
-        FindObjectOfType<VariableSave>().quesMove = 1;
+        FindObjectOfType<VariableSave>().db_quesMove = 1;
     }
     //ラジオボタンで分かりにくいを指定
     public void GameFalse()
     {
-        FindObjectOfType<VariableSave>().quesMove = 2;
+        FindObjectOfType<VariableSave>().db_quesMove = 2;
         FindObjectOfType<ErrorManager>().NotFlg = true;
         FindObjectOfType<ErrorManager>().GameNotTri.SetActive(true);
     }
     //ラジオボタンで酔ったと指定
     public void DrunkTrue()
     {
-        FindObjectOfType<VariableSave>().quesDrunk = 1;
+        FindObjectOfType<VariableSave>().db_quesDrunk = 1;
     }
 
     //ラジオボタンで酔わないと指定
     public void DrunkFalse()
     {
-        FindObjectOfType<VariableSave>().quesDrunk = 2;
+        FindObjectOfType<VariableSave>().db_quesDrunk = 2;
     }
 
     //操作がしにくいと指定

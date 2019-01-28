@@ -23,8 +23,8 @@ public class InputManager : MonoBehaviour {
             string inputValue = inputField.text;
 
             //string型をfloat型に変換してる
-            FindObjectOfType<VariableSave>().time = float.Parse(inputValue);
-            Debug.Log(FindObjectOfType<VariableSave>().time);
+            FindObjectOfType<VariableSave>().db_time = float.Parse(inputValue);
+            Debug.Log(FindObjectOfType<VariableSave>().db_time);
 
             InitInputField();
         }
@@ -38,8 +38,8 @@ public class InputManager : MonoBehaviour {
             string inputValue = inputField.text;
 
             //string型をint型に変換してる
-            FindObjectOfType<VariableSave>().floor = int.Parse(inputValue);
-            Debug.Log(FindObjectOfType<VariableSave>().floor);
+            FindObjectOfType<VariableSave>().db_floor = int.Parse(inputValue);
+            Debug.Log(FindObjectOfType<VariableSave>().db_floor);
 
             InitInputField();
         }
@@ -53,8 +53,8 @@ public class InputManager : MonoBehaviour {
             string inputValue = inputField.text;
 
             //string型をfloat型に変換してる
-            FindObjectOfType<VariableSave>().deadPointX = float.Parse(inputValue);
-            Debug.Log(FindObjectOfType<VariableSave>().deadPointX);
+            FindObjectOfType<VariableSave>().db_deadPointX = float.Parse(inputValue);
+            Debug.Log(FindObjectOfType<VariableSave>().db_deadPointX);
 
             InitInputField();
         }
@@ -68,8 +68,8 @@ public class InputManager : MonoBehaviour {
             string inputValue = inputField.text;
 
             //string型をfloat型に変換してる
-            FindObjectOfType<VariableSave>().deadPointZ = float.Parse(inputValue);
-            Debug.Log(FindObjectOfType<VariableSave>().deadPointZ);
+            FindObjectOfType<VariableSave>().db_deadPointZ = float.Parse(inputValue);
+            Debug.Log(FindObjectOfType<VariableSave>().db_deadPointZ);
 
             InitInputField();
         }

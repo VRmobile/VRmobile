@@ -24,7 +24,7 @@ public class ErrorManager : MonoBehaviour {
         if (Flg)//最初はエラー表示させない。
         {
             //年齢が入力されていない
-            if (FindObjectOfType<VariableSave>().age == 0)
+            if (FindObjectOfType<VariableSave>().db_age == 0)
             {
                 Error[0].SetActive(true);
             }
@@ -33,7 +33,7 @@ public class ErrorManager : MonoBehaviour {
                 Error[0].SetActive(false);
             }
             //性別が入力されていない
-            if (FindObjectOfType<VariableSave>().sex == 0)
+            if (FindObjectOfType<VariableSave>().db_sex == 0)
             {
                 Error[1].SetActive(true);
             }
@@ -42,7 +42,7 @@ public class ErrorManager : MonoBehaviour {
                 Error[1].SetActive(false);
             }
             //VRを他にプレイしたかが入力されていない
-            if (FindObjectOfType<VariableSave>().quesVR == 0)
+            if (FindObjectOfType<VariableSave>().db_quesVR == 0)
             {
                 Error[2].SetActive(true);
             }
@@ -51,7 +51,7 @@ public class ErrorManager : MonoBehaviour {
                 Error[2].SetActive(false);
             }
             //酔ったかが入力されていない
-            if (FindObjectOfType<VariableSave>().quesDrunk == 0)
+            if (FindObjectOfType<VariableSave>().db_quesDrunk == 0)
             {
                 Error[3].SetActive(true);
             }
@@ -60,7 +60,7 @@ public class ErrorManager : MonoBehaviour {
                 Error[3].SetActive(false);
             }
             //全体を通して分かりやすかったかが入力されていない
-            if (FindObjectOfType<VariableSave>().quesMove == 0)
+            if (FindObjectOfType<VariableSave>().db_quesMove == 0)
             {
                 Error[4].SetActive(true);
             }
@@ -70,7 +70,7 @@ public class ErrorManager : MonoBehaviour {
             }
 
             //いいえと答えた人への質問が入力されていない
-            if (FindObjectOfType<VariableSave>().quesMoveNot == 0 && NotFlg)
+            if (FindObjectOfType<VariableSave>().db_quesMoveNot == 0 && NotFlg)
             {
                 Error[5].SetActive(true);
             }

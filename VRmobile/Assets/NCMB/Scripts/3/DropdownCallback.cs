@@ -14,21 +14,15 @@ public class DropdownCallback : MonoBehaviour {
         switch (dropdown.value) {
 
             case 0:
-            Debug.Log("未入力");
-            vs.sex = 0;
-            Debug.Log(vs.sex);
+            vs.db_sex = 0;
             break;
 
             case 1:
-            Debug.Log("男");
-            vs.sex = 1;
-            Debug.Log(vs.sex);
+            vs.db_sex = 1;
             break;
 
             case 2:
-            Debug.Log("女");
-            vs.sex = 2;
-            Debug.Log(vs.sex);
+            vs.db_sex = 2;
             break;
 
             default:
@@ -40,57 +34,39 @@ public class DropdownCallback : MonoBehaviour {
         switch (dropdown.value) {
 
             case 0:
-            Debug.Log("未入力");
-            vs.age = 0;
-            Debug.Log(vs.age);
+            vs.db_age = 0;
             break;
 
             case 1:
-            Debug.Log("7～9才");
-            vs.age = 1;
-            Debug.Log(vs.age);
+            vs.db_age = 1;
             break;
 
             case 2:
-            Debug.Log("10～12才");
-            vs.age = 2;
-            Debug.Log(vs.age);
+            vs.db_age = 2;
             break;
 
             case 3:
-            Debug.Log("13～19才");
-            vs.age = 3;
-            Debug.Log(vs.age);
+            vs.db_age = 3;
             break;
 
             case 4:
-            Debug.Log("20代");
-            vs.age = 4;
-            Debug.Log(vs.age);
+            vs.db_age = 4;
             break;
 
             case 5:
-            Debug.Log("30代");
-            vs.age = 5;
-            Debug.Log(vs.age);
+            vs.db_age = 5;
             break;
 
             case 6:
-            Debug.Log("40代");
-            vs.age = 6;
-            Debug.Log(vs.age);
+            vs.db_age = 6;
             break;
 
             case 7:
-            Debug.Log("50代");
-            vs.age = 7;
-            Debug.Log(vs.age);
+            vs.db_age = 7;
             break;
 
             case 8:
-            Debug.Log("60代以上");
-            vs.age = 8;
-            Debug.Log(vs.age);
+            vs.db_age = 8;
             break;
 
             default:
