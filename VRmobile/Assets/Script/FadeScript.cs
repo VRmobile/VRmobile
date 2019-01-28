@@ -20,7 +20,7 @@ public class FadeScript : MonoBehaviour
         green = GetComponent<Image>().color.g;
         blue = GetComponent<Image>().color.b;
         alfa = GetComponent<Image>().color.a;
-
+        
     }
 
     public void FeadIn()

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
+
     private Vector3 VREye;
     public VRTeleporter teleporter;
     public Camera mainCamera;
@@ -19,7 +20,6 @@ public class Player : MonoBehaviour {
         smokeFlg = false;
         smokeTeleportFlg = false;
         circleGage.SetActive(false);
-        circleGage.GetComponent<Image>().fillAmount = 0;
     }
 
     void OnTriggerStay(Collider other)
@@ -47,7 +47,6 @@ public class Player : MonoBehaviour {
 
     }
 
-    
     void OnTriggerExit(Collider other)
     {
         if (other.tag == "smokeDamage")
@@ -56,8 +55,6 @@ public class Player : MonoBehaviour {
             // Debug.Log("煙");
         }
     }
-
-
 
     // Update is called once per frame
     void Update () {
@@ -76,6 +73,31 @@ public class Player : MonoBehaviour {
             teleporter.ToggleDisplay(false);
         }
 
+        //しゃがむ処理部分
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false || VvrController.HomeButtonDown() && squatFlg == false || 70.0f < x && x < 90.0f && squatFlg == false) {
+            //下を向くとしゃがむアニメーションが始まりアニメーションが終わるとしゃがむ
+            circleGage.SetActive(true);
+            if (FindObjectOfType<AnimationCtrl>().animSuquat) {
+                this.transform.position = new Vector3(VREye.x , VREye.y - 2.0f , VREye.z);
+                squatFlg = true;
+                FindObjectOfType<AnimationCtrl>().animSuquat = false;
+                circleGage.SetActive(false);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == true || VvrController.HomeButtonDown() && squatFlg == true || 320.0f < x && x < 340.0f && squatFlg == true) {
+            circleGage.SetActive(true);
+            if (FindObjectOfType<AnimationCtrl>().animSuquat) {
+                this.transform.position = new Vector3(VREye.x , VREye.y + 2.0f , VREye.z);
+                squatFlg = false;
+                FindObjectOfType<AnimationCtrl>().animSuquat = false;
+                circleGage.SetActive(false);
+            }
+        }
+        else {
+            circleGage.SetActive(false);
+        }
+
+        /*
         //しゃがむ処理部分
         if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false|| VvrController.HomeButtonDown() && squatFlg == false|| 70.0f < x && x < 90.0f && squatFlg == false)
         {
@@ -101,7 +123,7 @@ public class Player : MonoBehaviour {
             circleGage.GetComponent<Image>().fillAmount = 0;
             circleGage.SetActive(true);
         }
-
+        */
         //けむりに当たってからの処理
         if (smokeFlg == true)
         {
