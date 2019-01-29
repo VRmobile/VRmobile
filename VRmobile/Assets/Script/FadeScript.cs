@@ -38,7 +38,7 @@ public class FadeScript : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("NCMB");
+                Invoke("Clear" , 5.0f);
             }
             
         }
@@ -68,5 +68,9 @@ public class FadeScript : MonoBehaviour
 
     public void Restart() {
         SceneManager.LoadScene("map1");
+    }
+
+    public void Clear() {
+        SceneManager.LoadScene("NCMB");
     }
 }

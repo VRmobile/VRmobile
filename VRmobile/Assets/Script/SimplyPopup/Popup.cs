@@ -53,10 +53,10 @@ public class Popup : MonoBehaviour
         switch (state) {
         case State.UnUsed:
         case State.Close:
-            open.Play ();
+            open.Play();
             break;
         case State.Open:
-            close.Play ();
+            close.Play();
             break;
         }
     }

@@ -38173,7 +38173,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1968178818384376, guid: fa27736b5b788ab4b8dff6457030bc59, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1968178818384376, guid: fa27736b5b788ab4b8dff6457030bc59, type: 2}
       propertyPath: m_Name
@@ -40973,7 +40973,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d57559892913adc48977a7bee102083d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.03
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -47033,7 +47033,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ef7e5baf2d52ce4418d442e64f1590ff, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.052
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -60964,7 +60964,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1005038236900014, guid: f9f37def7bb321a44b12274fc0c422ef, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1854521846085594, guid: f9f37def7bb321a44b12274fc0c422ef, type: 2}
       propertyPath: m_IsActive

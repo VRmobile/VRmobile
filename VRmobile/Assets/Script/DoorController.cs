@@ -42,7 +42,6 @@ public class DoorController : MonoBehaviour
         {
             if (clearFlg == true)
             {
-                //Invoke("Clear", 5.0f);
                 if (yDegree < 90.0F)
                 {
                     yDegree += openSpeed * Time.deltaTime;
@@ -53,8 +52,7 @@ public class DoorController : MonoBehaviour
                 if(yDegree > 90.0F)
                 {
                     fede.FeadIn();
-                   // FindObjectOfType<ViewSelect>().MainView.SetActive(false);
-                    FindObjectOfType<ViewSelect>().ClearView.SetActive(true);
+                    Invoke("Clear" , 1.5f);
                 }
 
             }
@@ -91,7 +89,6 @@ public class DoorController : MonoBehaviour
 
     void Clear()
     {
-        SceneManager.LoadScene("NCMB");
-        Debug.Log("Clear");
+        FindObjectOfType<ViewSelect>().ClearView.SetActive(true);
     }
 }
