@@ -34,20 +34,18 @@ public class FadeScript : MonoBehaviour
 
             if(Ded.Dedpoint!= 0)
             {
-                Invoke("Restart" , 10.0f);
+                Invoke("Restart" , 7.5f);
             }
             else
             {
-                Invoke("Clear" , 5.0f);
+                Invoke("Clear" , 7.5f);
             }
-            
         }
         else
         {
             if (fadeIn) {
                 GetComponent<Image>().color = new Color(red , green , blue , alfa);
                 alfa += speed;
-
             }
         }
     }
@@ -64,7 +62,6 @@ public class FadeScript : MonoBehaviour
             }
         }
     }
-
 
     public void Restart() {
         SceneManager.LoadScene("map1");

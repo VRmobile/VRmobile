@@ -52,7 +52,7 @@ public class DoorController : MonoBehaviour
                 if(yDegree > 90.0F)
                 {
                     fede.FeadIn();
-                    Invoke("Clear" , 1.5f);
+                    Invoke("Clear" , 2.5f);
                 }
 
             }
