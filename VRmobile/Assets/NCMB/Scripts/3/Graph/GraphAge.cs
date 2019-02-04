@@ -88,6 +88,14 @@ public class GraphAge : MonoBehaviour {
                         trg[6]++;
                         break;
 
+                        case 7:
+                        trg[7]++;
+                        break;
+
+                        case 8:
+                        trg[8]++;
+                        break;
+
                         default:
                         break;
                     }
@@ -111,6 +119,8 @@ public class GraphAge : MonoBehaviour {
                 float ee = (float)trg[4] / (float)num * (float)100;
                 float f  = (float)trg[5] / (float)num * (float)100;
                 float g  = (float)trg[6] / (float)num * (float)100;
+                float h  = (float)trg[7] / (float)num * (float)100;
+                float i  = (float)trg[8] / (float)num * (float)100;
 
                 ratio[0] = a;
                 ratio[1] = b;
@@ -119,6 +129,8 @@ public class GraphAge : MonoBehaviour {
                 ratio[4] = ee;
                 ratio[5] = f;
                 ratio[6] = g;
+                ratio[7] = h;
+                ratio[8] = i;
 
                 Array.Sort(ratio);
                 Array.Reverse(ratio);
@@ -130,6 +142,8 @@ public class GraphAge : MonoBehaviour {
                 Text val04 = text[4].GetComponent<Text>();
                 Text val05 = text[5].GetComponent<Text>();
                 Text val06 = text[6].GetComponent<Text>();
+                Text val07 = text[7].GetComponent<Text>();
+                Text val08 = text[8].GetComponent<Text>();
 
                 Text ratio01 = textRatio[0].GetComponent<Text>();
                 Text ratio02 = textRatio[1].GetComponent<Text>();
@@ -138,6 +152,8 @@ public class GraphAge : MonoBehaviour {
                 Text ratio05 = textRatio[4].GetComponent<Text>();
                 Text ratio06 = textRatio[5].GetComponent<Text>();
                 Text ratio07 = textRatio[6].GetComponent<Text>();
+                Text ratio08 = textRatio[7].GetComponent<Text>();
+                Text ratio09 = textRatio[8].GetComponent<Text>();
 
                 val.text = "" + trg[0];
                 val01.text = "" + trg[1];
@@ -146,6 +162,8 @@ public class GraphAge : MonoBehaviour {
                 val04.text = "" + trg[4];
                 val05.text = "" + trg[5];
                 val06.text = "" + trg[6];
+                val07.text = "" + trg[7];
+                val08.text = "" + trg[8];
 
 
                 ratio01.text = "" + a + "%";
@@ -155,6 +173,8 @@ public class GraphAge : MonoBehaviour {
                 ratio05.text = "" + ee + "%";
                 ratio06.text = "" + f + "%";
                 ratio07.text = "" + g + "%";
+                ratio08.text = "" + h + "%";
+                ratio09.text = "" + i + "%";
 
             }
         });

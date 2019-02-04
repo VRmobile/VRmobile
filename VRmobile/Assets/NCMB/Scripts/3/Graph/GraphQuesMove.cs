@@ -29,7 +29,7 @@ public class GraphQuesMove : MonoBehaviour {
 
     void Awake() {
         Init();
-        FetchFloor();
+        FetchQuesMove();
     }
 
     public void Reset() {
@@ -41,7 +41,7 @@ public class GraphQuesMove : MonoBehaviour {
     }
 
     // 性別のグラフ
-    void FetchFloor() {
+    void FetchQuesMove() {
 
         //複数のNCMBObjectを取得するクエリを作成//
         NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject>("VariableData");
@@ -61,45 +61,50 @@ public class GraphQuesMove : MonoBehaviour {
                     num++;
 
                     switch (s) {
-                        case 1:
+                        case 0:
                         trg[0]++;
                         break;
 
-                        case 2:
+                        case 1:
                         trg[1]++;
+                        break;
+
+                        case 2:
+                        trg[2]++;
                         break;
 
                         default:
                         break;
                     }
-                    /*
-                    Debug.Log("trueは" + trg[0] + "回");
-                    Debug.Log("falseは" + trg[1] + "回");
-                    */
-                }
 
-                //Debug.Log(num + "回呼んだよ");
+                }
 
                 float a = (float)trg[0] / (float)num * (float)100;
                 float b = (float)trg[1] / (float)num * (float)100;
+                float c = (float)trg[2] / (float)num * (float)100;
 
                 ratio[0] = a;
                 ratio[1] = b;
+                ratio[2] = b;
 
                 Array.Sort(ratio);
                 Array.Reverse(ratio);
 
                 Text val = text[0].GetComponent<Text>();
                 Text val01 = text[1].GetComponent<Text>();
+                Text val02 = text[2].GetComponent<Text>();
 
                 Text ratio01 = textRatio[0].GetComponent<Text>();
                 Text ratio02 = textRatio[1].GetComponent<Text>();
+                Text ratio03 = textRatio[2].GetComponent<Text>();
 
                 val.text = "" + trg[0];
                 val01.text = "" + trg[1];
+                val02.text = "" + trg[2];
 
                 ratio01.text = "" + a + "%";
                 ratio02.text = "" + b + "%";
+                ratio03.text = "" + c + "%";
 
             }
         });

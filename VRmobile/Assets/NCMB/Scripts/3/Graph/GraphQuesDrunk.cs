@@ -29,7 +29,7 @@ public class GraphQuesDrunk : MonoBehaviour {
 
     void Awake() {
         Init();
-        FetchFloor();
+        FetchDrunk();
     }
 
     public void Reset() {
@@ -41,7 +41,7 @@ public class GraphQuesDrunk : MonoBehaviour {
     }
 
     // 性別のグラフ
-    void FetchFloor() {
+    void FetchDrunk() {
 
         //複数のNCMBObjectを取得するクエリを作成//
         NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject>("VariableData");
@@ -55,18 +55,22 @@ public class GraphQuesDrunk : MonoBehaviour {
             else {
                 //成功時の処理
                 foreach (NCMBObject obj in objList) {
-                    int s = System.Convert.ToInt32(obj["QuesVR"]);
+                    int s = System.Convert.ToInt32(obj["QuesDrunk"]);
 
                     Debug.Log(s);
                     num++;
 
                     switch (s) {
-                        case 1:
+                        case 0:
                         trg[0]++;
                         break;
 
-                        case 2:
+                        case 1:
                         trg[1]++;
+                        break;
+
+                        case 2:
+                        trg[2]++;
                         break;
 
                         default:
@@ -82,24 +86,30 @@ public class GraphQuesDrunk : MonoBehaviour {
 
                 float a = (float)trg[0] / (float)num * (float)100;
                 float b = (float)trg[1] / (float)num * (float)100;
+                float c = (float)trg[2] / (float)num * (float)100;
 
                 ratio[0] = a;
                 ratio[1] = b;
+                ratio[2] = b;
 
                 Array.Sort(ratio);
                 Array.Reverse(ratio);
 
                 Text val = text[0].GetComponent<Text>();
                 Text val01 = text[1].GetComponent<Text>();
+                Text val02 = text[2].GetComponent<Text>();
 
                 Text ratio01 = textRatio[0].GetComponent<Text>();
                 Text ratio02 = textRatio[1].GetComponent<Text>();
+                Text ratio03 = textRatio[2].GetComponent<Text>();
 
                 val.text = "" + trg[0];
                 val01.text = "" + trg[1];
+                val02.text = "" + trg[2];
 
                 ratio01.text = "" + a + "%";
                 ratio02.text = "" + b + "%";
+                ratio03.text = "" + c + "%";
 
             }
         });

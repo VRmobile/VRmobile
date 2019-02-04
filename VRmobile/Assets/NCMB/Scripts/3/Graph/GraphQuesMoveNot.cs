@@ -29,7 +29,7 @@ public class GraphQuesMoveNot : MonoBehaviour {
 
     void Awake() {
         Init();
-        FetchAge();
+        FetchQuesNot();
     }
 
     public void Reset() {
@@ -41,7 +41,7 @@ public class GraphQuesMoveNot : MonoBehaviour {
     }
 
     // 性別のグラフ
-    void FetchAge() {
+    void FetchQuesNot() {
 
         //複数のNCMBObjectを取得するクエリを作成//
         NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject>("VariableData");
@@ -61,52 +61,42 @@ public class GraphQuesMoveNot : MonoBehaviour {
 
                     switch (s) {
                         case 0:
-
-                        break;
-
-                        case 1:
                         trg[0]++;
                         break;
 
-                        case 2:
+                        case 1:
                         trg[1]++;
                         break;
 
-                        case 3:
+                        case 2:
                         trg[2]++;
                         break;
 
-                        case 4:
+                        case 3:
                         trg[3]++;
                         break;
 
-                        case 5:
+                        case 4:
                         trg[4]++;
                         break;
 
-                        case 6:
+                        case 5:
                         trg[5]++;
                         break;
 
-                        case 7:
+                        case 6:
                         trg[6]++;
+                        break;
+
+                        case 7:
+                        trg[7]++;
                         break;
 
                         default:
                         break;
                     }
                     
-                    Debug.Log("0は" + trg[0] + "回");
-                    Debug.Log("1は" + trg[1] + "回");
-                    Debug.Log("2は" + trg[2] + "回");
-                    Debug.Log("3は" + trg[3] + "回");
-                    Debug.Log("4は" + trg[4] + "回");
-                    Debug.Log("5は" + trg[5] + "回");
-                    Debug.Log("6は" + trg[6] + "回");
-                    Debug.Log("7は" + trg[7] + "回");
                 }
-
-                Debug.Log(num + "回呼んだよ");
 
                 float a  = (float)trg[0] / (float)num * (float)100;
                 float b  = (float)trg[1] / (float)num * (float)100;
@@ -136,6 +126,7 @@ public class GraphQuesMoveNot : MonoBehaviour {
                 Text val04 = text[4].GetComponent<Text>();
                 Text val05 = text[5].GetComponent<Text>();
                 Text val06 = text[6].GetComponent<Text>();
+                Text val07 = text[7].GetComponent<Text>();
 
                 Text ratio01 = textRatio[0].GetComponent<Text>();
                 Text ratio02 = textRatio[1].GetComponent<Text>();
@@ -144,6 +135,7 @@ public class GraphQuesMoveNot : MonoBehaviour {
                 Text ratio05 = textRatio[4].GetComponent<Text>();
                 Text ratio06 = textRatio[5].GetComponent<Text>();
                 Text ratio07 = textRatio[6].GetComponent<Text>();
+                Text ratio08 = textRatio[7].GetComponent<Text>();
 
                 val.text = "" + trg[0];
                 val01.text = "" + trg[1];
@@ -152,6 +144,7 @@ public class GraphQuesMoveNot : MonoBehaviour {
                 val04.text = "" + trg[4];
                 val05.text = "" + trg[5];
                 val06.text = "" + trg[6];
+                val07.text = "" + trg[7];
 
                 ratio01.text = "" + a  + "%";
                 ratio02.text = "" + b  + "%";
@@ -160,6 +153,7 @@ public class GraphQuesMoveNot : MonoBehaviour {
                 ratio05.text = "" + ee + "%";
                 ratio06.text = "" + f  + "%";
                 ratio07.text = "" + g  + "%";
+                ratio08.text = "" + h + "%";
 
             }
         });

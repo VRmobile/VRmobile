@@ -94,6 +94,7 @@ public class VariableSave : MonoBehaviour {
 
         NCMBObject obj = new NCMBObject("VariableData");
 
+        //VariableDataに項目を追加していく
         obj.Add("Age",          db_age);
         obj.Add("Sex",          db_sex);
         obj.Add("Time",         db_time);
@@ -109,6 +110,7 @@ public class VariableSave : MonoBehaviour {
         obj.Add("QuesMove" ,    db_quesMove);
         obj.Add("QuesMoveNot" , db_quesMoveNot);
 
+        //追加した項目をセーブする
         obj.SaveAsync((NCMBException e) => {
 
             if (e != null) {
@@ -123,7 +125,8 @@ public class VariableSave : MonoBehaviour {
     }
 
     public void Save() {
-        SaveVariableData(db_age , db_sex , db_time , db_floor , db_deadPointX , db_deadPointZ , db_deadFire , db_deadSmoke , db_deadDraft , db_clear , db_quesVR , db_quesDrunk , db_quesMove , db_quesMoveNot);
+        SaveVariableData(db_age , db_sex , db_time , db_floor , db_deadPointX , db_deadPointZ , db_deadFire ,
+                         db_deadSmoke , db_deadDraft , db_clear , db_quesVR , db_quesDrunk , db_quesMove , db_quesMoveNot);
         Debug.Log("セーブしたよ");
     }
 
