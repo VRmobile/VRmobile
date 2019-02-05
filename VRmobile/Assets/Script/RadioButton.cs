@@ -27,6 +27,10 @@ public class RadioButton : MonoBehaviour
         FindObjectOfType<VariableSave>().db_sex = 2;
     }
 
+    //ラジオボタンで性別未指定を選択
+    public void sexNoChoice() {
+        FindObjectOfType<VariableSave>().db_sex = 3;
+    }
     //ラジオボタンでVRを知っているを指定
     public void VRKnow()
     {
@@ -49,6 +53,7 @@ public class RadioButton : MonoBehaviour
         FindObjectOfType<VariableSave>().db_quesMove = 2;
         FindObjectOfType<ErrorManager>().NotFlg = true;
         FindObjectOfType<ErrorManager>().GameNotTri.SetActive(true);
+        FindObjectOfType<ErrorManager>().GameNotTriRe.SetActive(false);
     }
     //ラジオボタンで酔ったと指定
     public void DrunkTrue()

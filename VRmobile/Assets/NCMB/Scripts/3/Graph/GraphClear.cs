@@ -98,8 +98,8 @@ public class GraphClear : MonoBehaviour {
                 val.text = "" + trg[0];
                 val01.text = "" + trg[1];
 
-                ratio01.text = "" + a + "%";
-                ratio02.text = "" + b + "%";
+                ratio01.text = "" + a.ToString("f2") + "%";
+                ratio02.text = "" + b.ToString("f2") + "%";
 
             }
         });

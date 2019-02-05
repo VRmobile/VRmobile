@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ErrorManager : MonoBehaviour {
     public GameObject[] Error;
     public GameObject GameNotTri;
+    public GameObject GameNotTriRe;
     public bool Flg;
     public bool NotFlg; 
 	// Use this for initialization
@@ -17,7 +18,8 @@ public class ErrorManager : MonoBehaviour {
         NotFlg = false;
         Flg = false;
         GameNotTri.SetActive(false);
-	}
+        GameNotTriRe.SetActive(true);
+    }
 	
 	// Update is called once per frame
 	void Update () {

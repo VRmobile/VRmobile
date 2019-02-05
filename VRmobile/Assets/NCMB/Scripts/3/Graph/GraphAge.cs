@@ -166,15 +166,15 @@ public class GraphAge : MonoBehaviour {
                 val08.text = "" + trg[8];
 
 
-                ratio01.text = "" + a + "%";
-                ratio02.text = "" + b + "%";
-                ratio03.text = "" + c + "%";
-                ratio04.text = "" + d + "%";
-                ratio05.text = "" + ee + "%";
-                ratio06.text = "" + f + "%";
-                ratio07.text = "" + g + "%";
-                ratio08.text = "" + h + "%";
-                ratio09.text = "" + i + "%";
+                ratio01.text = "" + a.ToString("f2") + "%";
+                ratio02.text = "" + b.ToString("f2") + "%";
+                ratio03.text = "" + c.ToString("f2") + "%";
+                ratio04.text = "" + d.ToString("f2") + "%";
+                ratio05.text = "" + ee.ToString("f2") + "%";
+                ratio06.text = "" + f.ToString("f2") + "%";
+                ratio07.text = "" + g.ToString("f2") + "%";
+                ratio08.text = "" + h.ToString("f2") + "%";
+                ratio09.text = "" + i.ToString("f2") + "%";
 
             }
         });

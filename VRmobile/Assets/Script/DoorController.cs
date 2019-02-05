@@ -51,6 +51,7 @@ public class DoorController : MonoBehaviour
                 }
                 if(yDegree > 90.0F)
                 {
+                    MainDataManager.clear = true;
                     fede.FeadIn();
                     Invoke("Clear" , 2.5f);
                 }

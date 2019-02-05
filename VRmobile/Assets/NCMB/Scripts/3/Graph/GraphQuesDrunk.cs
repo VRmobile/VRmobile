@@ -107,9 +107,9 @@ public class GraphQuesDrunk : MonoBehaviour {
                 val01.text = "" + trg[1];
                 val02.text = "" + trg[2];
 
-                ratio01.text = "" + a + "%";
-                ratio02.text = "" + b + "%";
-                ratio03.text = "" + c + "%";
+                ratio01.text = "" + a.ToString("f2") + "%";
+                ratio02.text = "" + b.ToString("f2") + "%";
+                ratio03.text = "" + c.ToString("f2") + "%";
 
             }
         });
