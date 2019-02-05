@@ -90,7 +90,7 @@ public class VariableSave : MonoBehaviour {
     }
 
 
-    public void SaveVariableData(int age , int sex , float time , int floor , float deadPointX, float deadPointZ, int deadFire, int deadSmoke, int deadDraft, bool clear, int QuesVR, int QuesDrunk, int QuesMove, int QuesMoveNot) {
+    public void SaveVariableData(int age , int sex , float time , int floor , float deadPointX, float deadPointZ, int deadFire , int deadSmoke , int deadDraft , bool clear, int QuesVR , int QuesDrunk , int QuesMove , int QuesMoveNot) {
 
         NCMBObject obj = new NCMBObject("VariableData");
 
@@ -137,12 +137,12 @@ public class VariableSave : MonoBehaviour {
         return db_deadFire;
     }
 
-    public static int getSmokeDead()
+    public static float getSmokeDead()
     {
         return db_deadSmoke;
     }
 
-    public static int getDraftDead()
+    public static float getDraftDead()
     {
         return db_deadDraft;
     }

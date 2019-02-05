@@ -27,7 +27,7 @@ public class AnsManager : MonoBehaviour {
         ANSTEXT(GameTriAns, FindObjectOfType<VariableSave>().db_quesMoveNot , 4);
     }
 
-    void ANSTEXT(GameObject hei ,int quesNum ,int quesAns)
+    void ANSTEXT(GameObject hei , int quesNum , int quesAns)
     {
         Text Text = hei.GetComponent<Text>();
         switch (quesNum)

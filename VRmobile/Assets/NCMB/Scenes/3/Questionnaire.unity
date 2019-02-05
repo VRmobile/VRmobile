@@ -743,9 +743,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Age
-
-'
+  m_Text: "\u5E74\u9F62"
 --- !u!222 &100799145
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1274,7 +1272,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sex
+  m_Text: "\u6027\u5225"
 --- !u!222 &226162511
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3098,7 +3096,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30A2\u30F3\u30B1Drunk"
+  m_Text: "\u30A2\u30F3\u30B1\u9154\u3044"
 --- !u!222 &638995248
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4664,7 +4662,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30A2\u30F3\u30B1Move"
+  m_Text: "\u30A2\u30F3\u30B1\u79FB\u52D5"
 --- !u!222 &1000069362
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5065,7 +5063,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Floor
+  m_Text: "\u968E\u5C64"
 --- !u!222 &1129681919
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7370,7 +7368,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Clear
+  m_Text: "\u30AF\u30EA\u30A2"
 --- !u!222 &1517431869
 CanvasRenderer:
   m_ObjectHideFlags: 0
