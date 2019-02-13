@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
-public class circlController : MonoBehaviour {
+using UnityEngine.SceneManagement;
+public class ClearSend : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +11,10 @@ public class circlController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        Invoke("TitleLoad" , 3.0f);
 	}
+
+    void TitleLoad() {
+        SceneManager.LoadScene("Title");
+    }
 }

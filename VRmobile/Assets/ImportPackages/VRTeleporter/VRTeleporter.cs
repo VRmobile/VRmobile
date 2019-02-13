@@ -171,6 +171,4 @@ public class VRTeleporter : MonoBehaviour
         arcRenderer.positionCount = vertexList.Count;
         arcRenderer.SetPositions(vertexList.ToArray());
     }
-
-
 }

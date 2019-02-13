@@ -74,19 +74,22 @@ public class Player : MonoBehaviour {
         }
 
         //しゃがむ処理部分
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false || VvrController.HomeButtonDown() && squatFlg == false || 70.0f < x && x < 90.0f && squatFlg == false) {
-            //下を向くとしゃがむアニメーションが始まりアニメーションが終わるとしゃがむ
+        if ( 80.0f < x && x < 90.0f && squatFlg == false) {
+            //カメラの角度が一定の値いないになるとアニメーションが始まりアニメーションが終わるとしゃがむ
             circleGage.SetActive(true);
             if (FindObjectOfType<AnimationCtrl>().animSuquat) {
+                //カメラのｙ座標を下げる
                 this.transform.position = new Vector3(VREye.x , VREye.y - 2.0f , VREye.z);
                 squatFlg = true;
                 FindObjectOfType<AnimationCtrl>().animSuquat = false;
                 circleGage.SetActive(false);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == true || VvrController.HomeButtonDown() && squatFlg == true || 320.0f < x && x < 340.0f && squatFlg == true) {
+        else if (320.0f < x && x < 340.0f && squatFlg == true) {
+            //カメラの角度が一定の値いないになるとアニメーションが始まりアニメーションが終わるとしゃがむ
             circleGage.SetActive(true);
             if (FindObjectOfType<AnimationCtrl>().animSuquat) {
+                //カメラのｙ座標を上げる
                 this.transform.position = new Vector3(VREye.x , VREye.y + 2.0f , VREye.z);
                 squatFlg = false;
                 FindObjectOfType<AnimationCtrl>().animSuquat = false;
@@ -97,33 +100,6 @@ public class Player : MonoBehaviour {
             circleGage.SetActive(false);
         }
 
-        /*
-        //しゃがむ処理部分
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && squatFlg == false|| VvrController.HomeButtonDown() && squatFlg == false|| 70.0f < x && x < 90.0f && squatFlg == false)
-        {
-            //下を向くとサークルゲージが増加し最大になるとしゃがむ
-            circleGage.SetActive(true);
-            circleGage.GetComponent<Image>().fillAmount += 0.01f;
-            if(circleGage.GetComponent<Image>().fillAmount == 1.00f) {
-                this.transform.position = new Vector3(VREye.x , VREye.y - 2.0f , VREye.z);
-                squatFlg = true;
-            }
-        }
-        else if(Input.GetKeyDown(KeyCode.LeftArrow)&& squatFlg == true || VvrController.HomeButtonDown() && squatFlg == true|| 320.0f < x && x < 340.0f && squatFlg == true)
-        {
-            circleGage.SetActive(true);
-            circleGage.GetComponent<Image>().fillAmount += 0.01f;
-            if (circleGage.GetComponent<Image>().fillAmount == 1.00f)
-            {
-                this.transform.position = new Vector3(VREye.x, VREye.y + 2.0f, VREye.z);
-                squatFlg = false;
-            }
-        }
-        else {
-            circleGage.GetComponent<Image>().fillAmount = 0;
-            circleGage.SetActive(true);
-        }
-        */
         //けむりに当たってからの処理
         if (smokeFlg == true)
         {

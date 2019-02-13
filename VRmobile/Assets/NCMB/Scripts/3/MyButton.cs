@@ -45,12 +45,12 @@ public class MyButton : MonoBehaviour {
 
     public void OnSave() {
         FindObjectOfType<VariableSave>().Save();
-        Invoke("TitleLoad", 1.5f);
+        Invoke("ClearSendLoad" , 1.5f);
     }
 
 
-    void TitleLoad()
+    void ClearSendLoad()
     {
-        SceneManager.LoadScene("Title");
+        SceneManager.LoadScene("Send");
     }
 }
