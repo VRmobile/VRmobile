@@ -26,9 +26,9 @@ public class StageSelect : MonoBehaviour {
         }
         if(stageFlg == true)
         {
-            nomal.transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
-            miniGame.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
-            if (VvrController.AppButtonDown() || Input.GetMouseButtonDown(0))
+            nomal.transform.localScale = new Vector3(75.0f, 75.0f, 75.0f);
+            miniGame.transform.localScale = new Vector3(50.0f, 50.0f, 50.0f);
+            if (VvrController.AppButtonDown())
             {
 
                 MainDataManager.floor = 2;
@@ -40,9 +40,9 @@ public class StageSelect : MonoBehaviour {
         }
         else
         {
-            miniGame.transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
-            nomal.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
-            if (VvrController.AppButtonDown() || Input.GetKeyDown(KeyCode.Space))
+            nomal.transform.localScale = new Vector3(50.0f , 50.0f , 50.0f);
+            miniGame.transform.localScale = new Vector3(75.0f , 75.0f , 75.0f);
+            if (VvrController.AppButtonDown())
             {
                 SceneManager.LoadScene("Tutorial2");
             }

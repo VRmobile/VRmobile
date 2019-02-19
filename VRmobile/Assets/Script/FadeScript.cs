@@ -64,10 +64,10 @@ public class FadeScript : MonoBehaviour
     }
 
     public void Restart() {
-        SceneManager.LoadScene("map1");
+        SceneManager.LoadScene("mapver2");
     }
 
     public void Clear() {
-        SceneManager.LoadScene("NCMB");
+        SceneManager.LoadScene("Title");
     }
 }

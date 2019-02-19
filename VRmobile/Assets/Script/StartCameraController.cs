@@ -65,7 +65,7 @@ public class StartCameraController : MonoBehaviour
             Debug.Log(gameMode);
             if (gameMode==true)
             {
-                SceneManager.LoadScene("map1");
+                SceneManager.LoadScene("mapver2");
             }
             else if(gameMode == false)
             {
