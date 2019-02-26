@@ -8,7 +8,8 @@ public class Player : MonoBehaviour {
     private Vector3 VREye;
     public VRTeleporter teleporter;
     public Camera mainCamera;
-    public GameObject circleGage;
+    public GameObject squatGage;
+    public GameObject standGage;
     public static bool squatFlg;                      //しゃがんでいるかどうか
     bool smokeFlg;                                    //煙範囲内にいるかどうか
     public bool smokeTeleportFlg;
@@ -19,7 +20,8 @@ public class Player : MonoBehaviour {
         squatFlg = false;
         smokeFlg = false;
         smokeTeleportFlg = false;
-        circleGage.SetActive(false);
+        squatGage.SetActive(false);
+        standGage.SetActive(false);
     }
 
     void OnTriggerStay(Collider other)
@@ -74,30 +76,31 @@ public class Player : MonoBehaviour {
         }
 
         //しゃがむ処理部分
-        if ( 80.0f < x && x < 90.0f && squatFlg == false) {
+        if ( 60.0f < x && x < 90.0f && squatFlg == false) {
             //カメラの角度が一定の値いないになるとアニメーションが始まりアニメーションが終わるとしゃがむ
-            circleGage.SetActive(true);
-            if (FindObjectOfType<AnimationCtrl>().animSuquat) {
+            squatGage.SetActive(true);
+            if (FindObjectOfType<AnimationCtrl>().animStart) {
                 //カメラのｙ座標を下げる
                 this.transform.position = new Vector3(VREye.x , VREye.y - 2.0f , VREye.z);
                 squatFlg = true;
-                FindObjectOfType<AnimationCtrl>().animSuquat = false;
-                circleGage.SetActive(false);
+                FindObjectOfType<AnimationCtrl>().animStart = false;
+                squatGage.SetActive(false);
             }
         }
         else if (320.0f < x && x < 340.0f && squatFlg == true) {
-            //カメラの角度が一定の値いないになるとアニメーションが始まりアニメーションが終わるとしゃがむ
-            circleGage.SetActive(true);
-            if (FindObjectOfType<AnimationCtrl>().animSuquat) {
+            //カメラの角度が一定の値いないになるとアニメーションが始まりアニメーションが終わると立つ
+            standGage.SetActive(true);
+            if (FindObjectOfType<AnimationCtrl>().animStart) {
                 //カメラのｙ座標を上げる
                 this.transform.position = new Vector3(VREye.x , VREye.y + 2.0f , VREye.z);
                 squatFlg = false;
-                FindObjectOfType<AnimationCtrl>().animSuquat = false;
-                circleGage.SetActive(false);
+                FindObjectOfType<AnimationCtrl>().animStart = false;
+                standGage.SetActive(false);
             }
         }
         else {
-            circleGage.SetActive(false);
+            standGage.SetActive(false);
+            squatGage.SetActive(false);
         }
 
         //けむりに当たってからの処理

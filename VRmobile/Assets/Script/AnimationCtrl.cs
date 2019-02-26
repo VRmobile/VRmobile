@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimationCtrl : MonoBehaviour {
-    public bool animSuquat = false;
+    public bool animStart = false;
 	// Use this for initialization
 	void Start () {
-        animSuquat = false;
+        animStart = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(animSuquat);
+        Debug.Log(animStart);
 	}
 
-    public void Suquat() {
-        animSuquat = true;
+    public void AnimStart() {
+        animStart = true;
     }
+
 }
