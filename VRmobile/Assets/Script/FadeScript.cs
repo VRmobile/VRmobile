@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class FadeScript : MonoBehaviour
 {
     float alfa;
-    float speed = 0.01f;
+    float speed = 0.02f;
     float red, green, blue;
 
     private bool ONE;
@@ -34,11 +34,11 @@ public class FadeScript : MonoBehaviour
 
             if(Ded.Dedpoint!= 0)
             {
-                Invoke("Restart" , 7.5f);
+                Invoke("Restart" , 5.5f);
             }
             else
             {
-                Invoke("Clear" , 7.5f);
+                Invoke("Clear" , 5.5f);
             }
         }
         else

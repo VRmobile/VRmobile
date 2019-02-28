@@ -49,11 +49,11 @@ public class DoorController : MonoBehaviour
                     Debug.Log(yDegree);
                     
                 }
-                if(yDegree > 90.0F)
+                if(yDegree >= 90.0F)
                 {
                     MainDataManager.clear = true;
                     fede.FeadIn();
-                    Invoke("Clear" , 2.5f);
+                    Invoke("Clear" , 1.5f);
                 }
 
             }
